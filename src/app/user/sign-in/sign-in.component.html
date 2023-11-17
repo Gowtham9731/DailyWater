@@ -1,0 +1,88 @@
+<!-- <p>sign-in works!</p> -->
+<div class="container ">
+    <div class="row mt-4"></div>
+    <div class="row mt-4">
+        <h1 class="text-center" id="h1">Daily Water Enterprises</h1>
+        <h4 class="text-primary" id="h4">No: 27/6, Valmiki Street, <br>
+            Tambaram East, Chennai - 600059 <br>
+            (Next to Priyam Clinic & Near to Gandhi Park)</h4>
+            <img src="../../../assets/images/User/catteg.png" id="catteg"/>
+    </div>
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <img src="../../../assets/images/User/tenor.gif" id="tenor"/>
+        </div>
+        <div class="col"></div>
+    </div>
+    
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <div class="card card-body border border-5" id="signupcard">
+                <div class="card-title text-center"><h3 class="text-primary">Sign-Inn</h3></div>
+                <div class="row mt-4">
+                    <div class="col"> Enter Your Name :</div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="yname"/>
+                    </div>
+                </div>
+                <div class="row mt-4">
+                    <div class="col"> Enter Mobile Number :</div>
+                    <div class="col">
+                        <input type="text" class="form-control" id="ymobnum"/>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col">Select Options</div>
+                    <div class="col">
+                        <select class="select form-control text-center" id="option">
+                            <option selected>Select AnyOne...</option>
+                            <option class="text-primary" value="User">User</option>
+                            <option class="text-primary" value="Admin">Admin</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="collapse" id="signin">
+                    <div class="row mt-4">
+                        <div class="col"> Enter Your OTP :</div>
+                        <div class="col">
+                            <input type="text" class="form-control" id="otp"/>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col"> Create Your Password :</div>
+                        <div class="col">
+                            <input type="password" class="form-control" id="createpass"/>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <div class="col"> Confirm Your Password :</div>
+                        <div class="col">
+                            <input type="password" class="form-control" id="confirmpass"/>
+                        </div>
+                    </div>
+                    <div class="row mt-4"></div>
+                    <div class="row mt-4">
+                        <div class="col-4">
+                            <button type="button" class="btn btn-warning">Resent OTP</button>
+                        </div>
+                        <div class="col-2">
+                            <button type="button" class="btn btn-danger" onclick="window.location.reload(true)">Reload</button>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-2"></div>
+                    <div class="col"></div>
+
+                    <div class="col">
+                       <input type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#signin" value="Generate OTP" id="getotp" onclick="getData()"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>

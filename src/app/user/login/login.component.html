@@ -1,0 +1,59 @@
+<div id="bg">
+    <div class="row mt-4">
+        <h1 class="text-center" id="h1">Daily Water Enterprises</h1>
+        <h4 class="text-primary" id="h4">No: 27/6, Valmiki Street, <br>
+            Tambaram East, Chennai - 600059 <br>
+            (Next to Priyam Clinic & Near to Gandhi Park)</h4>
+            <img src="../../../assets/images/User/catteg.png" id="catteg"/>
+    </div>
+    <div class="main">  	
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+            <div class="signup">
+                <form>
+                    <label for="chk" aria-hidden="true">Sign up</label>
+                    <input type="text" name="txt" placeholder="User name" class="option" required="">
+                    <input type="text" name="Mobile Number" placeholder="Mobile Number" class="option" required="">
+                    <input type="email" name="Email" placeholder="E-mail" class="option" required="">
+                    <select class="form-control text-center option" value="Select AnyOne" >
+                        <option selected>Select AnyOne...</option>
+                        <option class="text-primary" value="User">User</option>
+                        <option class="text-primary" value="Admin">Admin</option>
+                    </select>
+                    <input type="password" name="pswd" placeholder="Password" class="option" required="">
+                    
+                    <button>Sign up</button>
+                </form>
+            </div>
+            <div class="login">
+                <form>
+                    <label for="chk" aria-hidden="true">Login</label>
+                    <div class="row radio">
+                        <div class="col-2"></div>
+                        <div class="col">
+                            <input type="radio" name="radio" value="user" id="user" checked/> <b> User</b>
+                        </div>
+                        <div class="col">
+                            <input type="radio" name="radio" value="admin" id="admin"/> <b class="text-danger">Admin</b>
+                        </div>
+                    </div>
+                    <!-- <input type="radio" name="login" id="user" checked />User
+                    <input type="radio" name="login" id="admin" /><b class="text-danger">Admin</b> -->
+                    <input type="email" name="email" placeholder="Email" class="option" required="">
+                    <input type="password" name="pswd" placeholder="Password" class="option" required="">
+                    {{msg}}
+                    <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
+                    <button (click)="gotoHome()">Login</button>
+                    
+                    <h6 class="text-center">Forgot Password..?</h6>
+                    
+                        <h6 class="text-center">Create New Account By Sign-In</h6>
+                    
+                </form>
+            </div>
+
+    </div>
+    <br>
+    <br>
+    <br>
+</div>
