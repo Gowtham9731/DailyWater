@@ -37,9 +37,8 @@
                             <input type="radio" name="radio" value="admin" id="admin"/> <b class="text-danger">Admin</b>
                         </div>
                     </div>
-                    <!-- <input type="radio" name="login" id="user" checked />User
-                    <input type="radio" name="login" id="admin" /><b class="text-danger">Admin</b> -->
-                    <input type="email" name="email" placeholder="Username" class="option" [(ngModel)]="username" required="">
+              
+                    <input type="text" name="text" placeholder="Username or E-mail" class="option" [(ngModel)]="username" required="">
                     <input type="password" name="pswd" placeholder="Password" class="option" [(ngModel)]="password" required="">
                     {{msg}}
                     <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
