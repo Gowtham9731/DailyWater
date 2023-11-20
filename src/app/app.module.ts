@@ -3,28 +3,27 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './user/user.component';
-// import { SignInComponent } from './User/sign-in/sign-in.component';
-// import { LoginComponent } from './User/login/login.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-// import { ProductsComponent } from './app/products/products.component';
-// import { AdminComponent } from './app/admin/admin.component';
-import { AboutusComponent } from './user/aboutus/aboutus.component';
-import { ContactusComponent } from './user/contactus/contactus.component';
-import { RegisterComponent } from './user/register/register.component';
-// import { GeneralComponent } from './user/Register/general/general.component';
-// import { PremiumComponent } from './user/Register/premium/premium.component';
 import { OfferzoneComponent } from './products/offerzone/offerzone.component';
 import { ShoppingComponent } from './products/shopping/shopping.component';
 import { PaymentComponent } from './payment/payment.component';
 import { HomeComponent } from './user/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {HttpClientModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { LoginComponent } from './user/login/login.component';
+import { UserComponent } from './user/user.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    // UserComponent,
+   
+    
+    UserComponent,
     // SignInComponent,
-    // LoginComponent,
+    LoginComponent,
     // ProductsComponent,
     // AdminComponent,
     // AboutusComponent,
@@ -40,7 +39,11 @@ import { HomeComponent } from './user/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,BrowserAnimationsModule,
+    HttpClientModule,FormsModule
+    // MatSidenavModule,
+    // MatButtonModule,MatIconModule,MatToolbarModule,MatListModule,MatCheckboxModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -12,12 +12,12 @@
             <div class="signup">
                 <form>
                     <label for="chk" aria-hidden="true">Sign up</label>
-                    <input type="text" name="txt" placeholder="User name" class="option" required="">
-                    <input type="text" name="Mobile Number" placeholder="Mobile Number" class="option" required="">
-                    <input type="email" name="Email" placeholder="E-mail" class="option" required="">
+                    <input type="text" name="txt" placeholder="User name" class="option" [(ngModel)]="uname" required="">
+                    <input type="text" name="Mobile Number" placeholder="Mobile Number" [(ngModel)]="mobnum" class="option" required="">
+                    <input type="email" name="Email" placeholder="E-mail" class="option" [(ngModel)]="email" required="">
                     <select class="form-control text-center option" value="Select AnyOne" >
                         <option selected>Select AnyOne...</option>
-                        <option class="text-primary" value="User">User</option>
+                        <option class="text-primary" value="User" >User</option>
                         <option class="text-primary" value="Admin">Admin</option>
                     </select>
                     <input type="password" name="pswd" placeholder="Password" class="option" required="">
@@ -39,11 +39,11 @@
                     </div>
                     <!-- <input type="radio" name="login" id="user" checked />User
                     <input type="radio" name="login" id="admin" /><b class="text-danger">Admin</b> -->
-                    <input type="email" name="email" placeholder="Email" class="option" required="">
-                    <input type="password" name="pswd" placeholder="Password" class="option" required="">
+                    <input type="email" name="email" placeholder="Username" class="option" [(ngModel)]="username" required="">
+                    <input type="password" name="pswd" placeholder="Password" class="option" [(ngModel)]="password" required="">
                     {{msg}}
                     <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
-                    <button (click)="gotoHome()">Login</button>
+                    <button (click)="getLogin()">Login</button>
                     
                     <h6 class="text-center">Forgot Password..?</h6>
                     
