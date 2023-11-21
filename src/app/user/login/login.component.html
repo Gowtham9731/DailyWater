@@ -10,11 +10,12 @@
         <input type="checkbox" id="chk" aria-hidden="true">
 
             <div class="signup">
-                <form>
+                <form #signupForm="ngForm">
+                <!-- <form> -->
                     <label for="chk" aria-hidden="true">Sign up</label>
-                    <input type="text" name="txt" placeholder="User name" class="option" [(ngModel)]="uname" required="">
-                    <input type="text" name="Mobile Number" placeholder="Mobile Number" [(ngModel)]="mobnum" class="option" required="">
-                    <input type="email" name="Email" placeholder="E-mail" class="option" [(ngModel)]="email" required="">
+                    <input type="text" name="txt" placeholder="User name" class="option" [(ngModel)]="yname" required="">
+                    <input type="text" name="Mobile Number" placeholder="Mobile Number" [(ngModel)]="ymobnum" class="option" required="">
+                    <input type="email" name="Email" placeholder="E-mail" class="option" [(ngModel)]="yemail" required="">
                     <select class="form-control text-center option" value="Select AnyOne" >
                         <option selected>Select AnyOne...</option>
                         <option class="text-primary" value="User" >User</option>
@@ -22,7 +23,9 @@
                     </select>
                     <input type="password" name="pswd" placeholder="Password" class="option" required="">
                     
-                    <button>Sign up</button>
+                    <button type="submit">Sign up</button>
+                    <h6 class="text-center text-white">If Existing User Click <b class="text-danger">Login</b> Button </h6>
+
                 </form>
             </div>
             <div class="login">
@@ -46,7 +49,7 @@
                     
                     <h6 class="text-center">Forgot Password..?</h6>
                     
-                        <h6 class="text-center">Create New Account By Sign-In</h6>
+                        <h6 class="text-center">Click <b class="text-danger"> SignUp</b> for Create New Account </h6>
                     
                 </form>
             </div>
