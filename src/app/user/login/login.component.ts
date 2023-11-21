@@ -1,26 +1,28 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ValidationService } from 'src/app/services/validation.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
 
   msg: string='';
-  uname:string='';
-  mobnum:string='';
-  email:any='';
+  yname:string='';
+  ymobnum:string='';
+  yemail:any='';
   http: any;
   username:string='';
   password:string='';
 
 
-  constructor(private router:Router){}
-  // inputUser(user:any){
-  //   return this.http.post('https://retoolapi.dev/BCxzLm/signup',user);
-  // }
+  constructor(public router:Router,public validationService: ValidationService){}
+  ngOnInit(): void {
+   this.validationService.getUsers().subscribe();
+  }
+  
   getLogin(){
     if(this.username=='hello' && this.password=='1234'){
       this.router.navigate(['/home']);
@@ -29,8 +31,5 @@ export class LoginComponent {
       alert("Not Matched");
     }
   }
-  // gotoHome(){
-  //   this.router.navigate(['/sign-in']);
-  // }
-
+ 
 }
