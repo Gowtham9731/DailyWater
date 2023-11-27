@@ -13,17 +13,18 @@
                 <form #signupForm="ngForm">
                 <!-- <form> -->
                     <label for="chk" aria-hidden="true">Sign up</label>
-                    <input type="text" name="txt" placeholder="User name" class="option" [(ngModel)]="yname" required="">
-                    <input type="text" name="Mobile Number" placeholder="Mobile Number" [(ngModel)]="ymobnum" class="option" required="">
-                    <input type="email" name="Email" placeholder="E-mail" class="option" [(ngModel)]="yemail" required="">
+                    <input type="text" placeholder="User name" class="option" [(ngModel)]="yname" required="">
+                    <input type="text" placeholder="Mobile Number" [(ngModel)]="ymobnum" class="option" required="">
+                    <input type="text" placeholder="E-mail" class="option" [(ngModel)]="yemail" required="">
                     <select class="form-control text-center option" value="Select AnyOne" >
                         <option selected>Select AnyOne...</option>
-                        <option class="text-primary" value="User" >User</option>
-                        <option class="text-primary" value="Admin">Admin</option>
+                        <option class="text-primary"  [(ngModel)]="user" >User</option>
+                        <option class="text-primary" [(ngModel)]="admin">Admin</option>
                     </select>
-                    <input type="password" name="pswd" placeholder="Password" class="option" required="">
+                    <input type="password" name="pswd" placeholder="Password" [(ngModel)]="ypassword" class="option" required="">
                     
-                    <button type="submit">Sign up</button>
+                    <button type="submit" (click)="signUpuser()">Sign up</button>
+                    {{signupMsg}}
                     <h6 class="text-center text-white">If Existing User Click <b class="text-danger">Login</b> Button </h6>
 
                 </form>
@@ -41,8 +42,8 @@
                         </div>
                     </div>
               
-                    <input type="text" name="text" placeholder="Username or E-mail" class="option" [(ngModel)]="username" required="">
-                    <input type="password" name="pswd" placeholder="Password" class="option" [(ngModel)]="password" required="">
+                    <input type="text" placeholder="Username or E-mail" class="option" required="">
+                    <input type="password" placeholder="Password" class="option" required="">
                     {{msg}}
                     <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
                     <button (click)="getLogin()">Login</button>
