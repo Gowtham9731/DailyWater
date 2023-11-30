@@ -13,15 +13,15 @@
                 <form #signupForm="ngForm">
                 <!-- <form> -->
                     <label for="chk" aria-hidden="true">Sign up</label>
-                    <input type="text" placeholder="User name" class="option" [(ngModel)]="yname" required="">
-                    <input type="text" placeholder="Mobile Number" [(ngModel)]="ymobnum" class="option" required="">
-                    <input type="text" placeholder="E-mail" class="option" [(ngModel)]="yemail" required="">
-                    <select class="form-control text-center option" value="Select AnyOne" >
+                    <input type="text" placeholder="User name" class="option" name="username" [(ngModel)]="username">
+                    <input type="text" placeholder="Mobile Number" [(ngModel)]="mobnum" name="mobnum" class="option">
+                    <input type="text" placeholder="E-mail" class="option" [(ngModel)]="email" name="email">
+                    <select class="form-control text-center option" value="Select AnyOne" name="designation" [(ngModel)]="designation" >
                         <option selected>Select AnyOne...</option>
-                        <option class="text-primary"  [(ngModel)]="user" >User</option>
-                        <option class="text-primary" [(ngModel)]="admin">Admin</option>
+                        <option class="text-primary" >User</option>
+                        <option class="text-primary" >Admin</option>
                     </select>
-                    <input type="password" name="pswd" placeholder="Password" [(ngModel)]="ypassword" class="option" required="">
+                    <input type="password" placeholder="Password" [(ngModel)]="password" name="password" class="option" required="">
                     
                     <button type="submit" (click)="signUpuser()">Sign up</button>
                     {{signupMsg}}
@@ -35,16 +35,16 @@
                     <div class="row radio">
                         <div class="col-2"></div>
                         <div class="col">
-                            <input type="radio" name="radio" value="user" id="user" checked/> <b> User</b>
+                            <input type="radio" name="radio" value="user" checked/> <b> User</b>
                         </div>
                         <div class="col">
-                            <input type="radio" name="radio" value="admin" id="admin"/> <b class="text-danger">Admin</b>
+                            <input type="radio" name="radio" value="admin"  /> <b class="text-danger">Admin</b>
                         </div>
                     </div>
               
-                    <input type="text" placeholder="Username or E-mail" class="option" required="">
-                    <input type="password" placeholder="Password" class="option" required="">
-                    {{msg}}
+                    <input type="text" placeholder="Username or E-mail" class="option" name="username" [(ngModel)]="username">
+                    <input type="password" placeholder="Password" class="option" name="password" [(ngModel)]="password">
+                    <span>{{msg}}</span>
                     <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
                     <button (click)="getLogin()">Login</button>
                     

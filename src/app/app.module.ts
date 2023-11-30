@@ -13,6 +13,8 @@ import {HttpClientModule} from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoginComponent } from './user/login/login.component';
 import { UserComponent } from './user/user.component';
+import { ProfileComponent } from './user/profile/profile.component';
+import { RegisterComponent } from './user/register/register.component';
 
 
 
@@ -28,13 +30,14 @@ import { UserComponent } from './user/user.component';
     // AdminComponent,
     // AboutusComponent,
     // ContactusComponent,
-    // RegisterComponent,
+    RegisterComponent,
     // GeneralComponent,
     // PremiumComponent,
     OfferzoneComponent,
     ShoppingComponent,
     PaymentComponent,
-    HomeComponent
+    HomeComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
