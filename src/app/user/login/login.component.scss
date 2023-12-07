@@ -131,6 +131,22 @@ button:hover{
 }
 #bg{
     background-color: #3a357d;
+} 
+@keyframes bubble{
+	0%{
+		opacity:0;
+		transform: translateY(0);
+	}
+	30%{
+		opacity: 1;
+	}
+	70%{
+		opacity: 1;
+	}
+	100%{
+		opacity: 0;
+		transform: translateY(-70vh);
+	}
 }
 .radio{
 	margin-top: -50px;
@@ -143,6 +159,7 @@ button:hover{
 .check{
 	margin-left: 40px;
 }
+
 
 
         

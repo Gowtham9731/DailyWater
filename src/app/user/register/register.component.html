@@ -105,9 +105,7 @@
                 </div>
                 <div class="col-6">
                    <input type="text" class="form-control" name="yourname" [(ngModel)]="yourname" />
-                   <span class="fa fa-info-circle errspan" id="circle"></span>
-                   <span class="fa fa-check-circle" id="circle"></span>
-                   <span><small id="namemsg"></small></span>
+              
                 </div>
               </div>
               <div class="row mt-4">
@@ -132,13 +130,13 @@
                   <label>Gender :</label>
                  </div>
                  <div class="col">
-                    <input type="radio" name="gender" value="Male" [(ngModel)]="male"/> Male
+                    <input type="radio" name="gender" value="male" [(ngModel)]="male"/> Male
                  </div>
                  <div class="col">
-                    <input type="radio" name="gender" value="Female" [(ngModel)]="female"/> Female
+                    <input type="radio" name="gender" value="female" [(ngModel)]="female"/> Female
                  </div>
                  <div class="col">
-                    <input type="radio" name="gender" value="Others" [(ngModel)]="others"/> Others
+                    <input type="radio" name="gender" value="others" [(ngModel)]="others"/> Others
                  </div>
                </div>
                <div class="row mt-4">
@@ -146,13 +144,13 @@
                   <label>Location :</label>
                  </div>
                  <div class="col">
-                    <input type="checkbox" name="Home" [(ngModel)]="Home"/> Home
+                    <input type="checkbox" name="Home" value="Home" [(ngModel)]="Home"/> Home
                  </div>
                  <div class="col">
-                    <input type="checkbox"  name="Apartment" [(ngModel)]="Apartment"/> Appartment
+                    <input type="checkbox"  name="Apartment" value="Apartment" [(ngModel)]="Apartment"/> Appartment
                  </div>
                  <div class="col">
-                    <input type="checkbox" name="Office" [(ngModel)]="Office"/> Office
+                    <input type="checkbox" name="Office" value="Office" [(ngModel)]="Office"/> Office
                  </div>
                </div>
                <div class="row mt-4">
@@ -192,6 +190,7 @@
                   <label>Office Address :</label>
                  </div>
                  <div class="col-6">
+                  <input type="text" class="form-control" name="officeaddr" [(ngModel)]="officeaddr"/>
                     <textarea type="addr" class="form-control" name="officeaddr" [(ngModel)]="officeaddr"></textarea>
                     <span><small id="officemsg"></small></span>
                  </div>

@@ -10,7 +10,7 @@ export class RegisterComponent {
 
     constructor(private httpClient:HttpClient){}
 
-  membership: string='';
+   membership: string='';
     yourname: string='';
     mobnum: any;
     email: any;
@@ -21,10 +21,10 @@ export class RegisterComponent {
     Apartment: string='';
     Office: string='';
     joindate: any;
-    homeaddr: any;
-    aparmentaddr: any;
-    officeaddr: any;
-   registerApi:string="https://retoolapi.dev/a89ajD/register";
+    homeaddr:string='';
+    aparmentaddr:string='';
+    officeaddr:any;
+  //  registerApi:string="https://retoolapi.dev/a89ajD/register";
    
   submitData() {
 
@@ -50,14 +50,13 @@ export class RegisterComponent {
           setTimeout(()=>{
             // this.router.navigate(['']);
           }, 3000);
+        
         },
         error => {
           // this.msg = "Encounterd a problem. Unable to create a user at this moment... Mannichooo... Plz try try again.";
         }
       );
-
-
-
+      this.Reset();
     }
     Reset() {
     this. membership ='';
@@ -74,10 +73,6 @@ export class RegisterComponent {
     this.homeaddr='';
     this.aparmentaddr='';
     this.officeaddr='';
-
     }
-    
-
-    
      
 }

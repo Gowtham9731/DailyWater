@@ -35,18 +35,18 @@
                     <div class="row radio">
                         <div class="col-2"></div>
                         <div class="col">
-                            <input type="radio" name="radio" value="user" checked/> <b> User</b>
+                            <input type="radio" name="radio" value="User" checked [(ngModel)]="User"  /> <b> User</b>
                         </div>
                         <div class="col">
-                            <input type="radio" name="radio" value="admin"  /> <b class="text-danger">Admin</b>
+                            <input type="radio" name="radio" value="Admin" [(ngModel)]="Admin" /> <b class="text-danger">Admin</b>
                         </div>
                     </div>
               
                     <input type="text" placeholder="Username or E-mail" class="option" name="username" [(ngModel)]="username">
                     <input type="password" placeholder="Password" class="option" name="password" [(ngModel)]="password">
-                    <span>{{msg}}</span>
+                    <div><span>{{msg}}</span></div>
                     <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
-                    <button (click)="getLogin()">Login</button>
+                    <button type="button" (click)="getLogin()">Login</button>
                     
                     <h6 class="text-center">Forgot Password..?</h6>
                     

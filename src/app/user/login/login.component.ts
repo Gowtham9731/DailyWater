@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-// import { ValidationService } from 'src/app/services/validation.service';
+import { ApiUrls } from 'src/app/common/apiUrls';
+import { ApiService } from 'src/app/services/api.service';
 
 @Component({
   selector: 'app-login',
@@ -10,9 +11,10 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
   http: any;
+  apiUrl: any;
 
   //loose Coupling - Dependency Injection
-  constructor(private httpClient : HttpClient, private router : Router){}
+  constructor(private httpClient : HttpClient, private router : Router, private apiservice:ApiService){}
    signupMsg: string="";
     msg: string='';
     username:string='';
@@ -31,7 +33,7 @@ export class LoginComponent {
         return true;
        }
       else{
-        this.msg = "Need all data and Password and Confirm Password should be same";
+        this.signupMsg = "Need all data and Password and Confirm Password should be same";
       }
     return false;
      }
@@ -70,37 +72,54 @@ export class LoginComponent {
 
   //  Get Methods...........
 
-  // username : string = '';
-  // password: string='';
-  user:string='';
-  admin:string='';
-  url : string = 'https://retoolapi.dev/BCxzLm/signup';
+  userName : string = '';
+  passWord: string='';
+  User:string='';
+  Admin:string='';
+  // url = 'https://retoolapi.dev/BCxzLm/signup';
 
  getLogin() {
 
   this.msg = '';
-      if(this.username != '' && this.password != ''){
+      if(this.userName != '' && this.passWord != ''){
 
-        // let apiUrl = this.url + "?username=" + this.username + "&password=" + this.password;
+        // Filter Applied
+        let appliedFilters = [];
+        appliedFilters.push("username=" + this.userName);
+        appliedFilters.push("password=" + this.password);
 
-        this.http.get(this.url).subscribe(
+        this.apiservice.getApiDataByfilter(ApiUrls.signUpApi, appliedFilters).subscribe(
           (data : any)=> {
             console.log(data);
-            if(data.length > 0 && data[0].username == this.username && data[0].password == this.password){
-              sessionStorage.setItem('userMobile', data[0].mobile);
-              this.router.navigate(['/home']);
-            }else{
+            // Check the user details using Conditional
+            if(data.length > 0 && data[0].username == this.userName && data[0].password == this.passWord){
+
+              // if(data[0].designation =="User"){
+              //   sessionStorage.setItem('userMobile', data[0].mobile);
+              //   this.router.navigate(['/profile']);
+              //   }
+              //     else if(data[0].designation == this.Admin){
+              //       sessionStorage.setItem('userMobile', data[0].mobile);
+              //       this.router.navigate(['/home']);
+              //       }
+              //       // else{
+              //       //   alert("Select User Option");
+              //       // }
+              // else{
+              //   alert("Select Admin Option");
+              // }
+            }
+            else{
               this.msg = "Invalid UserName or Password...";
             }
-          },
-          () => {}
+          }
         );
       }else{
         this.msg = "Username or Password is missing..."
       }
     }
 }
-
+  
 
   // export class LoginComponent{
 
@@ -120,7 +139,7 @@ export class LoginComponent {
   
   //     this.msg = '';
   //     if(this.userName != '' && this.password != ''){
-  //       let apiUrl = this.url + "?username=" + this.userName + "&password=" + this.password;
+        // let apiUrl = this.url + "?username=" + this.userName + "&password=" + this.password;
   //       this.http.get(apiUrl).subscribe(
   //         (data : any)=> {
   //           console.log(data);

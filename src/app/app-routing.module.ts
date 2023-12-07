@@ -6,6 +6,7 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 // import { GeneralComponent } from './user/register/general/general.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
+import { HeaderComponent } from './MainPage/header/header.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:'sign-in',component:SignInComponent},
   // {path:'general',component:GeneralComponent},
   {path:'register',component:RegisterComponent},
-  {path:'profile',component:ProfileComponent}
+  {path:'profile',component:ProfileComponent},
+  {path:'header',component:HeaderComponent}
 ];
 
 @NgModule({
