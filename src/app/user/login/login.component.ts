@@ -12,6 +12,7 @@ import { ApiService } from 'src/app/services/api.service';
 export class LoginComponent {
   http: any;
   apiUrl: any;
+selectedUserType: any;
 
   //loose Coupling - Dependency Injection
   constructor(private httpClient : HttpClient, private router : Router, private apiservice:ApiService){}
@@ -26,8 +27,7 @@ export class LoginComponent {
    validateUserData() {
     if(this.username != '' && this.mobnum != '' && this.email != '' 
       && this.password != ''
-      //  && this.cfPassword != '' 
-      // && this.password == this.cfPassword
+      
       )
       {
         return true;
@@ -49,10 +49,7 @@ export class LoginComponent {
         email:this.email,
         password: this.password,
         designation:this.designation
-        // username: this.userName,
-        // mobile: this.mobile,
-        // email: this.email,
-        // password: this.password
+        
        }
       //step3 send to api as postcall
       //needed httpmethod called POST, -> HttpClient obj -> HttpClientModule
@@ -64,7 +61,7 @@ export class LoginComponent {
           }, 3000);
         },
         error => {
-          // this.msg = "Encounterd a problem. Unable to create a user at this moment... Mannichooo... Plz try try again.";
+          alert("Encounterd a problem. Unable to create a user at this moment... Mannichooo... Plz try try again.");
         }
       );
     }
@@ -74,9 +71,6 @@ export class LoginComponent {
 
   userName : string = '';
   passWord: string='';
-  User:string='';
-  Admin:string='';
-  // url = 'https://retoolapi.dev/BCxzLm/signup';
 
  getLogin() {
 
@@ -94,20 +88,21 @@ export class LoginComponent {
             // Check the user details using Conditional
             if(data.length > 0 && data[0].username == this.userName && data[0].password == this.passWord){
 
-              // if(data[0].designation =="User"){
-              //   sessionStorage.setItem('userMobile', data[0].mobile);
-              //   this.router.navigate(['/profile']);
-              //   }
-              //     else if(data[0].designation == this.Admin){
-              //       sessionStorage.setItem('userMobile', data[0].mobile);
-              //       this.router.navigate(['/home']);
-              //       }
-              //       // else{
-              //       //   alert("Select User Option");
-              //       // }
-              // else{
-              //   alert("Select Admin Option");
-              // }
+              if(data[0].designation =="User"){
+                
+                sessionStorage.setItem('userMobile', data[0].mobile);
+                this.router.navigate(['/profile']);
+                }
+                  else if(data[0].designation == "Admin"){
+                    sessionStorage.setItem('userMobile', data[0].mobile);
+                    this.router.navigate(['/home']);
+                    }
+                    // else{
+                    //   alert("Select User Option");
+                    // }
+              else{
+                alert("Select Admin Option");
+              }
             }
             else{
               this.msg = "Invalid UserName or Password...";
@@ -120,43 +115,3 @@ export class LoginComponent {
     }
 }
   
-
-  // export class LoginComponent{
-
-  //   userName : string = '';
-  //   password : string = '';
-  //   msg : string = '';
-  //   url : string = 'https://retoolapi.dev/IBQleY/besiUpiUser';
-  
-  //   constructor(private http: HttpClient, private router: Router){}
-  
-  //   resetData(){
-  //     this.userName = '';
-  //     this.password = '';
-  //   }
-  
-  //   validateLogin(){
-  
-  //     this.msg = '';
-  //     if(this.userName != '' && this.password != ''){
-        // let apiUrl = this.url + "?username=" + this.userName + "&password=" + this.password;
-  //       this.http.get(apiUrl).subscribe(
-  //         (data : any)=> {
-  //           console.log(data);
-  //           if(data.length > 0 && data[0].username == this.userName && data[0].password == this.password){
-  //             sessionStorage.setItem('userMobile', data[0].mobile);
-  //             this.router.navigate(['/profile']);
-  //           }else{
-  //             this.msg = "Invalid UserName or Password...";
-  //           }
-  //         },
-  //         error => {}
-  //       );
-  //     }else{
-  //       this.msg = "Username or Password is missing..."
-  //     }
-  //   }
-  
-  // }
-  
-

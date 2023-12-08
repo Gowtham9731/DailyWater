@@ -35,12 +35,13 @@
                     <div class="row radio">
                         <div class="col-2"></div>
                         <div class="col">
-                            <input type="radio" name="radio" value="User" checked [(ngModel)]="User"  /> <b> User</b>
+                            <input type="radio" name="radio" value="User" [(ngModel)]="selectedUserType"  /> <b> User</b>
                         </div>
                         <div class="col">
-                            <input type="radio" name="radio" value="Admin" [(ngModel)]="Admin" /> <b class="text-danger">Admin</b>
+                            <input type="radio" name="radio" value="Admin" [(ngModel)]="selectedUserType" /> <b class="text-danger">Admin</b>
                         </div>
                     </div>
+                    
               
                     <input type="text" placeholder="Username or E-mail" class="option" name="username" [(ngModel)]="username">
                     <input type="password" placeholder="Password" class="option" name="password" [(ngModel)]="password">

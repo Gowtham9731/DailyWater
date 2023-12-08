@@ -7,16 +7,21 @@ import { SignInComponent } from './user/sign-in/sign-in.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { HeaderComponent } from './MainPage/header/header.component';
+import { FooterComponent } from './MainPage/footer/footer.component';
+import { OfferzoneComponent } from './Productpage/offerzone/offerzone.component';
+import { ShoppingComponent } from './Productpage/shopping/shopping.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'home',component:HomeComponent},
   {path:'sign-in',component:SignInComponent},
-  // {path:'general',component:GeneralComponent},
   {path:'register',component:RegisterComponent},
   {path:'profile',component:ProfileComponent},
-  {path:'header',component:HeaderComponent}
+  {path:'header',component:HeaderComponent},
+  {path:'footer',component:FooterComponent},
+  {path:'offerzone',component:OfferzoneComponent},
+  {path:'shopping',component:ShoppingComponent},
 ];
 
 @NgModule({

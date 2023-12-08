@@ -1,6 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { MatCardModule } from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
+import {MatDialogModule} from '@angular/material/dialog';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,6 +27,7 @@ import { EnquiresComponent } from './Admin/enquires/enquires.component';
 import { AccountsComponent } from './Admin/accounts/accounts.component';
 import { OfferzoneComponent } from './Productpage/offerzone/offerzone.component';
 import { ShoppingComponent } from './Productpage/shopping/shopping.component';
+import { AddToCartComponent } from './Productpage/add-to-cart/add-to-cart.component';
 
 
 
@@ -44,15 +49,16 @@ import { ShoppingComponent } from './Productpage/shopping/shopping.component';
     TransportsComponent,
     VendorsComponent,
     EnquiresComponent,
-    AccountsComponent
+    AccountsComponent,
+    AddToCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,BrowserAnimationsModule,
-    HttpClientModule,FormsModule
-    // MatSidenavModule,
-    // MatButtonModule,MatIconModule,MatToolbarModule,MatListModule,MatCheckboxModule
+    HttpClientModule,FormsModule,
+    MatCardModule,MatButtonModule,MatDialogModule
+   
     
   ],
   providers: [],
