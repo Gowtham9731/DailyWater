@@ -4,6 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatCardModule } from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSelectModule} from '@angular/material/select';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -28,6 +32,8 @@ import { AccountsComponent } from './Admin/accounts/accounts.component';
 import { OfferzoneComponent } from './Productpage/offerzone/offerzone.component';
 import { ShoppingComponent } from './Productpage/shopping/shopping.component';
 import { AddToCartComponent } from './Productpage/add-to-cart/add-to-cart.component';
+import { PaymentComponent } from './Payment/payment/payment.component';
+import { TrackingComponent } from './Payment/tracking/tracking.component';
 
 
 
@@ -50,14 +56,19 @@ import { AddToCartComponent } from './Productpage/add-to-cart/add-to-cart.compon
     VendorsComponent,
     EnquiresComponent,
     AccountsComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    PaymentComponent,
+    TrackingComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,BrowserAnimationsModule,
     HttpClientModule,FormsModule,
-    MatCardModule,MatButtonModule,MatDialogModule
+    MatCardModule,MatButtonModule,
+    MatDialogModule,MatSelectModule,MatTooltipModule,
+    MatIconModule,MatInputModule,
+    
    
     
   ],

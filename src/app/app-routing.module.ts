@@ -10,6 +10,8 @@ import { HeaderComponent } from './MainPage/header/header.component';
 import { FooterComponent } from './MainPage/footer/footer.component';
 import { OfferzoneComponent } from './Productpage/offerzone/offerzone.component';
 import { ShoppingComponent } from './Productpage/shopping/shopping.component';
+import { AddToCartComponent } from './Productpage/add-to-cart/add-to-cart.component';
+import { PaymentComponent } from './Payment/payment/payment.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -22,6 +24,8 @@ const routes: Routes = [
   {path:'footer',component:FooterComponent},
   {path:'offerzone',component:OfferzoneComponent},
   {path:'shopping',component:ShoppingComponent},
+  {path:'addtocart',component:AddToCartComponent},
+  {path:'payment',component:PaymentComponent},
 ];
 
 @NgModule({
