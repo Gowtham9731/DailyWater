@@ -3,13 +3,13 @@
         <div class="col"></div>
         <div class="col">
             <mat-card class=" card1">
-                <mat-card-header>Gowtham</mat-card-header>
+                <mat-card-header></mat-card-header>
                 <mat-card class="bg-success card2">
-                    <mat-card-header>GsiX</mat-card-header>
+                    <mat-card-header></mat-card-header>
                     <div class="row">
                         <div class="col-5">
                             <mat-card class="bg-primary card3">
-                                <mat-card-header>Go</mat-card-header>
+                                <mat-card-header></mat-card-header>
                             </mat-card>
                         </div>
                         <div class="col">
@@ -89,6 +89,7 @@
                             </mat-expansion-panel>
                         </div>
                     </div>
+                    <button mat-stroked-button class="bg-info form-control mt-3">Submit</button>
                 </mat-expansion-panel>
 
             </mat-card>
@@ -97,45 +98,45 @@
                     Payment Method
                 </mat-expansion-panel-header>
                 <div class="row mt-4">
-                <div class="col-4">
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            <label>Wallet
-                                <mat-icon>account_balance_wallet</mat-icon>
-                            </label>
-                        </mat-expansion-panel-header>
-                        <mat-form-field>
-                            <mat-label>UPI Pin Number</mat-label>
-                            <input matInput>
-                        </mat-form-field>
-                    </mat-expansion-panel>
+                    <div class="col-4">
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                <label>Wallet
+                                    <mat-icon>account_balance_wallet</mat-icon>
+                                </label>
+                            </mat-expansion-panel-header>
+                            <mat-form-field>
+                                <mat-label>UPI Pin Number</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                        </mat-expansion-panel>
 
-                </div>
-                <div class="col">
-                    <mat-expansion-panel>
-                        <mat-expansion-panel-header>
-                            Online Payments
-                        </mat-expansion-panel-header>
-                        <mat-form-field>
-                            <mat-label>Acc Number</mat-label>
-                            <input matInput>
-                        </mat-form-field><mat-form-field>
-                            <mat-label>Pin Number</mat-label>
-                            <input matInput>
-                        </mat-form-field><mat-form-field>
-                            <mat-label>Acc Holder Name </mat-label>
-                            <input matInput>
-                        </mat-form-field><mat-form-field>
-                            <mat-label>Bank Name</mat-label>
-                            <input matInput>
-                        </mat-form-field>
-                        <mat-form-field>
-                            <mat-label>IFSC Code</mat-label>
-                            <input matInput>
-                        </mat-form-field>
-                        <button mat-stroked-button class="bg-info">Submit</button>
-                    </mat-expansion-panel>
-                </div>
+                    </div>
+                    <div class="col">
+                        <mat-expansion-panel>
+                            <mat-expansion-panel-header>
+                                Online Payments
+                            </mat-expansion-panel-header>
+                            <mat-form-field>
+                                <mat-label>Acc Number</mat-label>
+                                <input matInput>
+                            </mat-form-field><mat-form-field>
+                                <mat-label>Pin Number</mat-label>
+                                <input matInput>
+                            </mat-form-field><mat-form-field>
+                                <mat-label>Acc Holder Name </mat-label>
+                                <input matInput>
+                            </mat-form-field><mat-form-field>
+                                <mat-label>Bank Name</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                            <mat-form-field>
+                                <mat-label>IFSC Code</mat-label>
+                                <input matInput>
+                            </mat-form-field>
+                            <button mat-stroked-button class="bg-info">Submit</button>
+                        </mat-expansion-panel>
+                    </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col">
@@ -165,8 +166,21 @@
             </mat-expansion-panel>
         </div>
         <div class="col">
+            
 
-
+        </div>
+        <div class="row mt-4">
+            <div class="col"></div>
+            <div class="col">
+                <button mat-raised-button color="warn">Reset
+                    <mat-icon>thumb_down</mat-icon>
+                </button>
+            </div>
+            <div class="col">
+                <button mat-raised-button color="primary">Ok Done...
+                    <mat-icon>thumb_up</mat-icon>
+                </button>
+            </div>
         </div>
     </div>
 </div>

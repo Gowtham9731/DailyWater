@@ -8,5 +8,5 @@ import { FormControl, Validators } from '@angular/forms';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent {
-  
+
 }
