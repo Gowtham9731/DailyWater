@@ -12,6 +12,11 @@ import { OfferzoneComponent } from './Productpage/offerzone/offerzone.component'
 import { ShoppingComponent } from './Productpage/shopping/shopping.component';
 import { AddToCartComponent } from './Productpage/add-to-cart/add-to-cart.component';
 import { PaymentComponent } from './Payment/payment/payment.component';
+import { AdminhomeComponent } from './Admin/adminhome/adminhome.component';
+import { AboutusComponent } from './user/aboutus/aboutus.component';
+import { GeneralMemberComponent } from './user/register/general-member/general-member.component';
+import { PremiumMemberComponent } from './user/register/premium-member/premium-member.component';
+import { OrdersComponent } from './Admin/orders/orders.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -26,6 +31,11 @@ const routes: Routes = [
   {path:'shopping',component:ShoppingComponent},
   {path:'addtocart',component:AddToCartComponent},
   {path:'payment',component:PaymentComponent},
+  {path:'adminhome',component:AdminhomeComponent},
+  {path:'aboutus',component:AboutusComponent},
+  {path:'generalmember',component:GeneralMemberComponent},
+  {path:'premiummember',component:PremiumMemberComponent},
+  {path:'orders',component:OrdersComponent},
 ];
 
 @NgModule({

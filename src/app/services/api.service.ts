@@ -34,5 +34,8 @@ export class ApiService {
   deleteApiData(url: string, recordId: string){
     return this.httpCliet.delete(url + "/" + recordId);
   }
+  getdata (data:any){
+    return this.httpCliet.get("https://retoolapi.dev/BCxzLm/signup"+"?"+data);
+  }
 
 }

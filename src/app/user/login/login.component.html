@@ -1,5 +1,5 @@
 <div id="bg">
-    <div class="row mt-4">
+    <div class="row">
         <h1 class="text-center animate_animated animate_bounce animate_infinite" id="h1">Daily Water Enterprises</h1>
         <h4 class="text-primary" id="h4">No: 27/6, Valmiki Street, <br>
             Tambaram East, Chennai - 600059 <br>
@@ -13,14 +13,20 @@
                 <form #signupForm="ngForm">
                 <!-- <form> -->
                     <label for="chk" aria-hidden="true">Sign up</label>
+                    <div class="row">
+                        <div class="col-2"></div>
+                        <div class="col-3 p-3">
+                            <mat-checkbox name="user" [(ngModel)]="user"><b style="color: aliceblue;">User</b> </mat-checkbox>
+                            <!-- <mat-checkbox (change)="chckChange()"><b style="color: aliceblue;">User</b> </mat-checkbox> -->
+                        </div>
+                        <div class="col p-3">
+                            <mat-checkbox [disabled]="true">Admin </mat-checkbox>
+                        </div>
+                    </div>
+                    
                     <input type="text" placeholder="User name" class="option" name="username" [(ngModel)]="username">
                     <input type="text" placeholder="Mobile Number" [(ngModel)]="mobnum" name="mobnum" class="option">
                     <input type="text" placeholder="E-mail" class="option" [(ngModel)]="email" name="email">
-                    <select class="form-control text-center option" value="Select AnyOne" name="designation" [(ngModel)]="designation" >
-                        <option selected>Select AnyOne...</option>
-                        <option class="text-primary" >User</option>
-                        <option class="text-primary" >Admin</option>
-                    </select>
                     <input type="password" placeholder="Password" [(ngModel)]="password" name="password" class="option" required="">
                     
                     <button type="submit" (click)="signUpuser()">Sign up</button>
@@ -35,10 +41,10 @@
                     <div class="row radio">
                         <div class="col-2"></div>
                         <div class="col">
-                            <input type="radio" name="radio" value="User" [(ngModel)]="selectedUserType"  /> <b> User</b>
+                            <input type="radio" name="radio" id="usr" value="User" [(ngModel)]="selectedUserType"  /> <b> User</b>
                         </div>
                         <div class="col">
-                            <input type="radio" name="radio" value="Admin" [(ngModel)]="selectedUserType" /> <b class="text-danger">Admin</b>
+                            <input type="radio" name="radio" id="admin" value="Admin" [(ngModel)]="selectedUserType" /> <b class="text-danger">Admin</b>
                         </div>
                     </div>
                     

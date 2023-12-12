@@ -11,6 +11,8 @@ import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatRippleModule} from '@angular/material/core';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatCheckboxModule} from '@angular/material/checkbox';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +39,8 @@ import { ShoppingComponent } from './Productpage/shopping/shopping.component';
 import { AddToCartComponent } from './Productpage/add-to-cart/add-to-cart.component';
 import { PaymentComponent } from './Payment/payment/payment.component';
 import { TrackingComponent } from './Payment/tracking/tracking.component';
+import { PremiumMemberComponent } from './user/register/premium-member/premium-member.component';
+import { GeneralMemberComponent } from './user/register/general-member/general-member.component';
 
 
 
@@ -61,7 +65,9 @@ import { TrackingComponent } from './Payment/tracking/tracking.component';
     AccountsComponent,
     AddToCartComponent,
     PaymentComponent,
-    TrackingComponent
+    TrackingComponent,
+    PremiumMemberComponent,
+    GeneralMemberComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +77,8 @@ import { TrackingComponent } from './Payment/tracking/tracking.component';
     MatCardModule,MatButtonModule,
     MatDialogModule,MatSelectModule,MatTooltipModule,
     MatIconModule,MatInputModule,MatRadioModule,
-    MatExpansionModule,MatRippleModule,
+    MatExpansionModule,MatRippleModule,MatMenuModule,
+    MatCheckboxModule,
     
    
     

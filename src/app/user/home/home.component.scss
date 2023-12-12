@@ -1,52 +1,5 @@
-#navbar{
-    position: relative;
-    background: linear-gradient(-45deg, #0973ff, #e73c7e, #d5cf23, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradient 8s ease infinite;
-}
- @keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-} 
-#thiru{
-    /* position: absolute; */
-    margin-top: -100px;
-    margin-left: 430px;
-}
-#register{
-    margin-top: 08px;
-}
-#account{
-    margin-top: 04px;
-}
-#h1{
-    color: aliceblue;
-    height: 70px;
-    font-size: 50px;
-    font-weight: bolder;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-#logo{
-    margin-top: -80px;
-    margin-left: 30px;
-}
-#paani{
-    margin-left: 120px;
-}
-#catteg{
-    position: absolute;
-    margin-top: -38px;
-    margin-left:-150px;
-    width: 300px;
-    height: 150px;
-}
-button{
-    margin-left: 5px;
+#img1{
+
+    width:50rem;
+
 }

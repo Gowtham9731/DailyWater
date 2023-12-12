@@ -20,12 +20,6 @@
     margin-top: -100px;
     margin-left: 430px;
 }
-#register{
-    margin-top: 08px;
-}
-#account{
-    margin-top: 04px;
-}
 #h1{
     color: aliceblue;
     height: 70px;
@@ -47,6 +41,11 @@
     width: 300px;
     height: 150px;
 }
-button{
-    margin-left: 5px;
+.button1{
+    margin-left: 150px;
+}
+button:hover{
+    box-shadow: 0px 0px 5px #ffffff,
+                0px 0px 30px#ffffff,
+                0px 0px 90px #ffffff;
 }

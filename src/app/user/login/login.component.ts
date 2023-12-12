@@ -13,6 +13,8 @@ export class LoginComponent {
   http: any;
   apiUrl: any;
 selectedUserType: any;
+loginChck : boolean =false;
+user: any;
 
   //loose Coupling - Dependency Injection
   constructor(private httpClient : HttpClient, private router : Router, private apiservice:ApiService){}
@@ -23,6 +25,10 @@ selectedUserType: any;
     email:any='';
     password:any;
     designation:string='';
+
+    chckChange(){
+      this.loginChck = !this.loginChck;
+    }
   
    validateUserData() {
     if(this.username != '' && this.mobnum != '' && this.email != '' 
@@ -39,6 +45,7 @@ selectedUserType: any;
      }
 
    signUpuser() {
+    alert(this.loginChck);
     if (this.validateUserData()) {
 
       //step1 getdata
@@ -75,23 +82,30 @@ selectedUserType: any;
  getLogin() {
 
   this.msg = '';
-      if(this.userName != '' && this.passWord != ''){
+      if(this.username != '' && this.password != ''){
 
         // Filter Applied
-        let appliedFilters = [];
-        appliedFilters.push("username=" + this.userName);
-        appliedFilters.push("password=" + this.password);
+        // let appliedFilters = [];
+        
+        
+        // appliedFilters.push("username=" + this.userName);
+        // appliedFilters.push("password=" + this.password);
+        // console.log(appliedFilters);
+        
 
-        this.apiservice.getApiDataByfilter(ApiUrls.signUpApi, appliedFilters).subscribe(
+        // this.apiservice.getApiDataByfilter(ApiUrls.signUpApi, appliedFilters).subscribe(
+          let dataa="username="+this.username+"&password="+this.password;
+          this.apiservice.getdata(dataa).subscribe(
           (data : any)=> {
             console.log(data);
             // Check the user details using Conditional
-            if(data.length > 0 && data[0].username == this.userName && data[0].password == this.passWord){
+            if(data.length > 0 && data[0].username == this.username && data[0].password == this.password){
+console.log(data[0].designation);
 
               if(data[0].designation =="User"){
                 
                 sessionStorage.setItem('userMobile', data[0].mobile);
-                this.router.navigate(['/profile']);
+                this.router.navigate(['/home']);
                 }
                   else if(data[0].designation == "Admin"){
                     sessionStorage.setItem('userMobile', data[0].mobile);

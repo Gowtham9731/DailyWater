@@ -1,92 +1,66 @@
-    <nav class="nav navbar-expand-lg navbar-light bg-info" id="navbar" >
-        <div class="container">
-            <h1 class="text-center" id="h1">Daily Water Enterprises</h1>
-            <img src="../../../assets/images/Home/Book-Paani-Online-Logo-300x60.png" id="paani" />
-            <div class="collapse navbar-collapse" id="titles">
-                <img src="../../../assets/images/Home/thiru.gif" id="thiru"/>
-                <img src="../../../assets/images/Home/company.png" id="logo"/>
-                <img src="../../../assets/images/Home/catteg.png" id="catteg"/>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#titles" aria-controls="titles"
-            aria-expanded="false" aria-label="Toggle Navigation"><span class="navbar-toggler-icon bg-danger"></span></button>
-         <div class="collapse navbar-collapse" id="titles">
-            <ul class="navbar-nav ms-auto" id="ul">
-                <li class="nav-item"><a href="F-Home.html" class="nav-link">
-                    <button type="button" class="btn btn-dark">
-                        <i class="fa fa-home"></i>&nbsp; Home</button>
-                    </a></li>
-                <li class="nav-item"><a href="F-About Us.html" class="nav-link">
-                    <button type="button" class="btn btn-dark">
-                        <i class="fa fa-bullhorn"></i>&nbsp;About Us</button>
-                    </a></li>
-                    <li class="nav-item">
-                        <button mdbDropdown class="btn btn-dark dropdown-toggle" type="button" id="register" aria-expanded="false">
-                        <i class="fa fa-check-square-o"></i>&nbsp;
-                          Register
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="register">
-                          <li><a class="dropdown-item" href="F-GeneralMember.html">General Member</a></li>
-                          <li><a class="dropdown-item" href="F-PremiumMember.html">Premium Member</a></li>
-                        </ul>
-                    </li>
-                <li class="nav-item"><a href="F-OfferZone.html" class="nav-link">
-                     <button type="button" class="btn btn-dark">
-                        <i class="fa fa-gift"></i>&nbsp;Offer Zone</button>
-                    </a></li>
-                <li class="nav-item"><a href="F-Shopping.html" class="nav-link">
-                    <button type="button" class="btn btn-dark">
-                        <i class="fa fa-shopping-bag"></i>&nbsp;Shoppping</button>
-                    </a></li>
-                <li class="nav-item"><a href="F-Contact Us.html" class="nav-link">
-                    <button type="button" class="btn btn-dark">
-                        <i class="fa fa-phone"></i>&nbsp;Contact Us</button>
-                    </a></li>
-                    <li class="nav-item" id="account">
-                        <button class="btn btn-dark dropdown-toggle" type="button" id="account" data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-address-book"></i>&nbsp;
-                        Account
-                        </button>
-                        <ul class="dropdown-menu" aria-labelledby="account">
-                        <div class="card card-body border border-4">
-                            <div class="card-title text-center"><u><b>User Details</b></u></div>
-                            
-                            <div class="row">
-                                <div class="col text-center">
-                                <i class="fa fa-user-circle-o"></i>&nbsp;
-                                 <a href="F-Profile.html"><label id="uprofile">Profile</label></a>
-                                </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col text-center">
-                                <i class="fa fa-bar-chart" ></i>&nbsp;
-                                <a href="F-UserReport.html"><label id="ureport">Reports</label></a>
-                               </div>
-                            </div>
-                            <div class="row mt-4">
-                                <div class="col text-center">
-                                <i class="fa fa-plane" ></i>&nbsp;
-                                <a href="F-ServicePage.html"><label id="uservice">Services</label></a>
-                               </div>
-                            </div>
-                        </div>
-                    </ul>
-                     
-                    </li>
-                     <li class="nav-item"><a href="F-Logout.html" class="nav-link">
-                        <button type="button" class="btn btn-danger">Logout
-                            <i class="fa fa-power-off"></i>
-                        </button>
-                         </a></li>
-            </ul>
+<nav class="nav navbar-expand-lg navbar-light bg-info" id="navbar">
+    <div class="container">
+        <h1 class="text-center" id="h1">Daily Water Enterprises</h1>
+        <img src="../../../assets/images/Home/Book-Paani-Online-Logo-300x60.png" id="paani" />
+        <div class="collapse navbar-collapse" id="titles">
+            <img src="../../../assets/images/Home/thiru.gif" id="thiru" />
+            <img src="../../../assets/images/Home/company.png" id="logo" />
+            <!-- <img src="../../../assets/images/Home/catteg.png" id="catteg" /> -->
         </div>
-        </div>
-    </nav>
-    <!-- <div class="container1">
+    <div class="button1">
+        <a routerLink="/home"><button mat-button >Home
+            <mat-icon>home</mat-icon>
+        </button></a>
+        <a routerLink="/aboutus"><button mat-button >About Us
+            <mat-icon>thumb_up_alt</mat-icon>
+        </button></a>
+        <button mat-button [matMenuTriggerFor]="register" >Register
+            <mat-icon>assignment</mat-icon></button>
+        <mat-menu #register="matMenu">
+            <a routerLink="/premiummember"><button mat-menu-item>Premium Membership
+                <mat-icon>grade</mat-icon>
+            </button></a>
+            <a routerLink="/generalmember"><button mat-menu-item>General Membership
+                <mat-icon>account_circle</mat-icon>
+            </button></a>
+        </mat-menu>
+        <a routerLink="/offerzone"><button mat-button >OfferZone
+            <mat-icon>notifications_active</mat-icon>
+        </button></a>
+        <a routerLink="/shopping"><button mat-button >Shopping
+            <mat-icon>shopping_cart</mat-icon>
+        </button></a>
+        <a routerLink="/contactus"><button mat-button >Contact Us
+            <mat-icon>perm_phone_msg</mat-icon>
+        </button></a>
+        <a routerLink="/services"><button mat-button >Services
+            <mat-icon> local_shipping</mat-icon>
+        </button></a>
+        <button mat-button [matMenuTriggerFor]="account">Account
+            <mat-icon>account_box</mat-icon></button>
+        <mat-menu #account="matMenu">
+            <a routerLink="/"><button mat-menu-item>UserAcc
+                <mat-icon>account_circle</mat-icon>
+            </button></a>
+            <a routerLink="/"><button mat-menu-item>
+                <mat-icon> local_printshop</mat-icon>Statements</button></a>
+                <a routerLink="/"><button mat-menu-item>Wallet
+                <mat-icon>account_balance_wallet</mat-icon>
+            </button></a>
+        </mat-menu>
+        <button mat-button class="bg-danger">
+            <mat-icon>power_settings_new</mat-icon>
+        </button>
+    </div>
+</div>
+
+
+ </nav>
+        
+<!-- <div class="container1">
         <div class="row">
             <div class="col">
                 <img src="../../../assets/images/Home/1..jpg" id="img1"/>
             </div>
         </div>
     </div> -->
-
-
