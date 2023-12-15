@@ -1,4 +1,4 @@
-<div id="bg">
+<div id="bg" class="container-fluied">
     <div class="row">
         <h1 class="text-center animate_animated animate_bounce animate_infinite" id="h1">Daily Water Enterprises</h1>
         <h4 class="text-primary" id="h4">No: 27/6, Valmiki Street, <br>
@@ -20,7 +20,7 @@
                             <!-- <mat-checkbox (change)="chckChange()"><b style="color: aliceblue;">User</b> </mat-checkbox> -->
                         </div>
                         <div class="col p-3">
-                            <mat-checkbox [disabled]="true">Admin </mat-checkbox>
+                            <mat-checkbox [disabled]="true" [(ngModel)]="admin">Admin </mat-checkbox>
                         </div>
                     </div>
                     
@@ -37,14 +37,14 @@
             </div>
             <div class="login">
                 <form>
-                    <label for="chk" aria-hidden="true">Login</label>
+                    <label for="chk" aria-hidden="true" ><b id="logintxt">Login</b></label>
                     <div class="row radio">
                         <div class="col-2"></div>
                         <div class="col">
-                            <input type="radio" name="radio" id="usr" value="User" [(ngModel)]="selectedUserType"  /> <b> User</b>
+                            <input type="radio" name="selectedUserType" id="usr" value="user" [(ngModel)]="selectedUserType"  /> <b> User</b>
                         </div>
                         <div class="col">
-                            <input type="radio" name="radio" id="admin" value="Admin" [(ngModel)]="selectedUserType" /> <b class="text-danger">Admin</b>
+                            <input type="radio" name="selectedUserType" id="admin" value="admin" [(ngModel)]="selectedUserType" /> <b class="text-danger">Admin</b>
                         </div>
                     </div>
                     

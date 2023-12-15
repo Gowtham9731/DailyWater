@@ -12,9 +12,10 @@ import { ApiService } from 'src/app/services/api.service';
 export class LoginComponent {
   http: any;
   apiUrl: any;
-selectedUserType: any;
-loginChck : boolean =false;
-user: any;
+  
+
+// loginChck : boolean =false;
+// user: boolean =false;
 
   //loose Coupling - Dependency Injection
   constructor(private httpClient : HttpClient, private router : Router, private apiservice:ApiService){}
@@ -25,27 +26,32 @@ user: any;
     email:any='';
     password:any;
     designation:string='';
+    user='user';
+    admin: any;
+  
 
-    chckChange(){
-      this.loginChck = !this.loginChck;
-    }
+    // chckChange(){
+    //   this.loginChck = !this.loginChck;
+    // }
   
    validateUserData() {
     if(this.username != '' && this.mobnum != '' && this.email != '' 
-      && this.password != ''
+      && this.password != '' && this.user!=''
       
       )
       {
         return true;
        }
       else{
-        this.signupMsg = "Need all data and Password and Confirm Password should be same";
+        // this.signupMsg = "Need all data and Password and Confirm Password should be same";
+        alert("Need all data so check once you gives...");
       }
     return false;
      }
 
    signUpuser() {
-    alert(this.loginChck);
+    // alert(this.loginChck);
+    // alert(this.user);
     if (this.validateUserData()) {
 
       //step1 getdata
@@ -55,7 +61,8 @@ user: any;
         mobnum:this.mobnum,
         email:this.email,
         password: this.password,
-        designation:this.designation
+        // designation:this.designation
+        user:this.user
         
        }
       //step3 send to api as postcall
@@ -74,10 +81,11 @@ user: any;
     }
   }
 
-  //  Get Methods...........
+  //  Get Methods for login..........
 
   userName : string = '';
   passWord: string='';
+  selectedUserType='user';
 
  getLogin() {
 
@@ -100,9 +108,9 @@ user: any;
             console.log(data);
             // Check the user details using Conditional
             if(data.length > 0 && data[0].username == this.username && data[0].password == this.password){
-console.log(data[0].designation);
+             console.log(data[0].designation);
 
-              if(data[0].designation =="User"){
+              if(data[0].user =="true"){
                 
                 sessionStorage.setItem('userMobile', data[0].mobile);
                 this.router.navigate(['/home']);

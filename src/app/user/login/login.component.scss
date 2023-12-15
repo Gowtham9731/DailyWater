@@ -1,14 +1,14 @@
 
-body{
-	margin: 0;
-	padding: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	min-height: 100vh;
-	font-family: 'Jost', sans-serif;
-	// background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-}
+// body{
+// 	margin: 0;
+// 	padding: 0;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: center;
+// 	min-height: 100vh;
+// 	font-family: 'Jost', sans-serif;
+// 	// background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+// }
 .main{
     margin-left: 700px;
     margin-top: 60px;
@@ -16,10 +16,9 @@ body{
 	height: 500px;
 	// background: red;
 	overflow: hidden;
-    background-color:#302b63;
-	// background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/ cover;
+    background-color:#252256ca;
 	border-radius: 10px;
-	box-shadow: 5px 20px 50px #fafafa;
+	box-shadow: 5px 20px 50px #61baf6;
 }
 #chk{
 	display: none;
@@ -41,19 +40,6 @@ label{
     margin-top: 20px;
 	font-family:'Times New Roman', Times, serif;
 }
-// input{
-// 	width: 60%;
-// 	height: 30px;
-// 	background: #b4b4b4;
-// 	justify-content: center;
-// 	display: flex;
-// 	margin: 20px auto;
-// 	padding: 10px;
-// 	border: none;
-// 	outline: none;
-// 	border-radius: 5px;
-
-// }
 button{
 	width: 60%;
 	height: 40px;
@@ -122,16 +108,17 @@ button:hover{
     position: absolute;
     width: 650px;
     margin-top: 300px;
-    margin-left: -40px;
+    margin-left: 2rem;
 }
 #h4{
     position: absolute;
-    margin-left: 50px;
+    margin-left: 10rem;
     margin-top: 200px;
 
 }
 #bg{
-    background-color: #3a357d;
+    // background-color: #a7a2f9;
+	background-image: url('../../../assets/images/User/loginbg.webp');
 } 
 @keyframes bubble{
 	0%{
@@ -160,6 +147,12 @@ button:hover{
 .check{
 	margin-left: 40px;
 }
+#logintxt{
+	margin-top: 2rem;
+	font-size: 3rem;
+	font-weight: bolder;
+}
+
 
 
 

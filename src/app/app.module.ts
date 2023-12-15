@@ -13,6 +13,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatRippleModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -78,7 +79,7 @@ import { GeneralMemberComponent } from './user/register/general-member/general-m
     MatDialogModule,MatSelectModule,MatTooltipModule,
     MatIconModule,MatInputModule,MatRadioModule,
     MatExpansionModule,MatRippleModule,MatMenuModule,
-    MatCheckboxModule,
+    MatCheckboxModule,MatPaginatorModule,
     
    
     
