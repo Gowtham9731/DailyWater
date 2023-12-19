@@ -29,7 +29,6 @@ import { HeaderComponent } from './MainPage/header/header.component';
 import { FooterComponent } from './MainPage/footer/footer.component';
 import { WelcomeComponent } from './MainPage/welcome/welcome.component';
 import { AdminhomeComponent } from './Admin/adminhome/adminhome.component';
-import { StockentryComponent } from './Admin/stockentry/stockentry.component';
 import { OrdersComponent } from './Admin/orders/orders.component';
 import { TransportsComponent } from './Admin/transports/transports.component';
 import { VendorsComponent } from './Admin/vendors/vendors.component';
@@ -42,6 +41,11 @@ import { PaymentComponent } from './Payment/payment/payment.component';
 import { TrackingComponent } from './Payment/tracking/tracking.component';
 import { PremiumMemberComponent } from './user/register/premium-member/premium-member.component';
 import { GeneralMemberComponent } from './user/register/general-member/general-member.component';
+import { StackentryComponent } from './Admin/stackentry/stackentry.component';
+import { StaffentryComponent } from './Admin/Staff/staffentry/staffentry.component';
+import { AdminheaderComponent } from './MainPage/adminheader/adminheader.component';
+import { StaffAttendenceComponent } from './Admin/Staff/staff-attendence/staff-attendence.component';
+
 
 
 
@@ -58,7 +62,6 @@ import { GeneralMemberComponent } from './user/register/general-member/general-m
     FooterComponent,
     WelcomeComponent,
     AdminhomeComponent,
-    StockentryComponent,
     OrdersComponent,
     TransportsComponent,
     VendorsComponent,
@@ -68,7 +71,11 @@ import { GeneralMemberComponent } from './user/register/general-member/general-m
     PaymentComponent,
     TrackingComponent,
     PremiumMemberComponent,
-    GeneralMemberComponent
+    GeneralMemberComponent,
+    StackentryComponent,
+    StaffentryComponent,
+    AdminheaderComponent,
+    StaffAttendenceComponent,
   ],
   imports: [
     BrowserModule,
@@ -80,7 +87,6 @@ import { GeneralMemberComponent } from './user/register/general-member/general-m
     MatIconModule,MatInputModule,MatRadioModule,
     MatExpansionModule,MatRippleModule,MatMenuModule,
     MatCheckboxModule,MatPaginatorModule,
-    
    
     
   ],

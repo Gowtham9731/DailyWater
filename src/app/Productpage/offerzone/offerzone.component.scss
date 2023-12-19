@@ -1,8 +1,17 @@
-.card{
+#offerbg{
     display: flex;
+    // overflow:scroll;
+    // width:fit-content;
+}
+.card{
+    // display: flex;
     position: relative;
     max-width: 300px;
     max-height: 200px;
+    flex-direction: column;
+    min-height: 600px;
+    margin-left: 2rem;
+    
 }
 .Offer{
     color: rgb(25, 29, 253);
@@ -21,3 +30,13 @@
     margin-left: 13rem;
     margin-top: -5rem;
 }
+// #off:hover .glow {
+//     --glow-blur:1.5;
+//     --glow-opacity:0.6;
+//     --glow-scale:2.5;
+//     --glow-radius:0;
+//     --rotate:300;
+//     --glow-rotate-unit:0;
+//     --scale-factor:1.25;
+//     animation-play-state: paused;
+// }

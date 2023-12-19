@@ -7,4 +7,22 @@ import { Component } from '@angular/core';
 })
 export class AddToCartComponent {
 
+  count: number = 1;
+  cost: number = 80;
+  offer: number = 60;
+
+  onincrement() {
+    this.count++;
+    this.cost = this.count * 80;
+    this.offer = this.count * 60;
+  }
+
+  ondecrement() {
+    if (this.count > 1) {
+      this.count--;
+      this.cost = this.count * 80;
+      this.offer = this.count * 60;
+    }
+  }
+
 }

@@ -7,71 +7,72 @@ import { Component } from '@angular/core';
   styleUrls: ['./general-member.component.scss']
 })
 export class GeneralMemberComponent {
-  constructor(private httpClient:HttpClient){}
+  yourname: string = '';
+  mobnum: any;
+  email: any;
+  gender: any;
+  homeAddr: any;
+  apartmentAddr: any;
+  officeAddr: any;
+  constructor(private httpClient: HttpClient) { }
 
-  // membership: string='';
-   yourname: string='';
-   mobnum: any;
-   email: any;
-   male: string='';
-   female:string='';
-   others:string='';
-   Home: string='';
-   Apartment: string='';
-   Office: string='';
-   joindate: any;
-   homeaddr:string='';
-   aparmentaddr:string='';
-   officeaddr:any;
- //  registerApi:string="https://retoolapi.dev/a89ajD/register";
-  
- submitData() {
 
-   let userData={
-    //  membership:this.membership,
-     yourname:this.yourname,
-     mobnum:this.mobnum,
-     email:this.email,
-     male:this.male,
-     female:this.female,
-     others:this.others,
-     Home:this.Home,
-     Apartment:this.Apartment,
-     Office:this.Office,
-     joindate:this.joindate,
-     homeaddr:this.homeaddr,
-     aparmentaddr:this.aparmentaddr,
-     officeaddr:this.officeaddr
-   }
-   this.httpClient.post("https://retoolapi.dev/a89ajD/register",userData).subscribe(
-       () => {
-         alert("Registered Successfully...");
-         setTimeout(()=>{
-           // this.router.navigate(['']);
-         }, 3000);
-       
-       },
-       error => {
-         // this.msg = "Encounterd a problem. Unable to create a user at this moment... Mannichooo... Plz try try again.";
-       }
-     );
-     this.Reset();
-   }
-   Reset() {
-  //  this. membership ='';
-   this.mobnum='';
-   this.yourname='';
-   this.email='';
-   this.male='';
-   this.female='';
-   this.others='';
-   this.Home='';
-   this.Apartment='';
-   this.Office='';
-   this.joindate='';
-   this.homeaddr='';
-   this.aparmentaddr='';
-   this.officeaddr='';
-   }
-    
+  //  registerApi:string="https://retoolapi.dev/a89ajD/register"; 
+
+  checkInputs() {
+    if(this.yourname != '' && this.mobnum != '' && this.email != '' && this.gender != '' && this.homeAddr != '' && this.apartmentAddr != '' && this.officeAddr != ''){
+      return true;
+    } else {
+      alert("Need to all fields must Entry..")
+    }
+    return false;
+  }
+  submitData() {
+    if (this.checkInputs()) {
+
+      let userData = {
+        yourname: this.yourname,
+        mobnum: this.mobnum,
+        email: this.email,
+        gender: this.gender,
+        homeAddr: this.homeAddr,
+        apartmentAddr: this.apartmentAddr,
+        officeAddr: this.officeAddr
+      }
+
+      this.httpClient.post("https://retoolapi.dev/a89ajD/register", userData).subscribe(
+        () => {
+          alert("Registered Successfully...");
+          setTimeout(() => {
+            // this.router.navigate(['']);
+          }, 3000);
+
+        },
+        error => {
+          // this.msg = "Encounterd a problem. Unable to create a user at this moment... Mannichooo... Plz try try again.";
+        }
+      );
+      this.Reset();
+    }
+  }
+  Reset() {
+    this.mobnum = '';
+    this.yourname = '';
+    this.email = '';
+    this.gender = '';
+    this.homeAddr = '';
+    this.apartmentAddr = '';
+    this.officeAddr = '';
+  }
+  step = 0;
+  setStep(index: number) {
+    this.step = index;
+  }
+  nextStep() {
+    this.step++;
+  }
+  prevStep() {
+    this.step--;
+  }
+
 }

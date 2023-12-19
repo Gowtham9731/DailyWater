@@ -8,22 +8,21 @@
     </div>
     <div class="main">  	
         <input type="checkbox" id="chk" aria-hidden="true">
-
             <div class="signup">
                 <form #signupForm="ngForm">
-                <!-- <form> -->
                     <label for="chk" aria-hidden="true">Sign up</label>
                     <div class="row">
                         <div class="col-2"></div>
                         <div class="col-3 p-3">
-                            <mat-checkbox name="user" [(ngModel)]="user"><b style="color: aliceblue;">User</b> </mat-checkbox>
-                            <!-- <mat-checkbox (change)="chckChange()"><b style="color: aliceblue;">User</b> </mat-checkbox> -->
-                        </div>
-                        <div class="col p-3">
-                            <mat-checkbox [disabled]="true" [(ngModel)]="admin">Admin </mat-checkbox>
+                            <mat-radio-group aria-label="Select an option"  [(ngModel)]="usertype" [ngModelOptions]="{standalone: true}">
+                            <mat-radio-button value="user" name="user" checked >
+                                <b style="color: aliceblue;">User</b></mat-radio-button>
+
+                                <mat-radio-button value="admin" id="admin1">
+                                    <b style="color: aliceblue;">Admin</b></mat-radio-button>
+                                </mat-radio-group>
                         </div>
                     </div>
-                    
                     <input type="text" placeholder="User name" class="option" name="username" [(ngModel)]="username">
                     <input type="text" placeholder="Mobile Number" [(ngModel)]="mobnum" name="mobnum" class="option">
                     <input type="text" placeholder="E-mail" class="option" [(ngModel)]="email" name="email">
@@ -32,7 +31,6 @@
                     <button type="submit" (click)="signUpuser()">Sign up</button>
                     {{signupMsg}}
                     <h6 class="text-center text-white">If Existing User Click <b class="text-danger">Login</b> Button </h6>
-
                 </form>
             </div>
             <div class="login">
@@ -40,22 +38,24 @@
                     <label for="chk" aria-hidden="true" ><b id="logintxt">Login</b></label>
                     <div class="row radio">
                         <div class="col-2"></div>
-                        <div class="col">
-                            <input type="radio" name="selectedUserType" id="usr" value="user" [(ngModel)]="selectedUserType"  /> <b> User</b>
-                        </div>
-                        <div class="col">
-                            <input type="radio" name="selectedUserType" id="admin" value="admin" [(ngModel)]="selectedUserType" /> <b class="text-danger">Admin</b>
+                        <div class="col-3 p-3">
+                            <mat-radio-group aria-label="Select an option" [(ngModel)]="userType" [ngModelOptions]="{standalone: true}">
+                            <mat-radio-button value="user" name="user" >
+                                <b style="color: rgb(18, 28, 74);">User</b></mat-radio-button>
+
+                                <mat-radio-button value="admin" id="admin2">
+                                    <b style="color: rgb(1, 39, 72);">Admin</b></mat-radio-button>
+                                </mat-radio-group>
                         </div>
                     </div>
-                    
-              
                     <input type="text" placeholder="Username or E-mail" class="option" name="username" [(ngModel)]="username">
                     <input type="password" placeholder="Password" class="option" name="password" [(ngModel)]="password">
                     <div><span>{{msg}}</span></div>
-                    <input type="checkbox" class="text-center check"/> Apply Terms & Conditions
+                    <!-- <mat-checkbox>Apply Terms & Conditions...</mat-checkbox> -->
                     <button type="button" (click)="getLogin()">Login</button>
                     
-                    <h6 class="text-center">Forgot Password..?</h6>
+                    <h3 class="text-center"><mat-label>Forgot Password..?</mat-label></h3>
+                
                     
                         <h6 class="text-center">Click <b class="text-danger"> SignUp</b> for Create New Account </h6>
                     

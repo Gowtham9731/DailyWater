@@ -1,0 +1,43 @@
+<div class="card-container mt-2">
+    <mat-card *ngFor="let card of cards">
+      <img mat-card-image [src]="card.image" alt="{{ card.title }}">
+      <mat-card-header>
+        <mat-card-title>{{ card.title }}</mat-card-title>
+      </mat-card-header>
+      <!-- <mat-card-content>
+        {{ card.content }}
+      </mat-card-content> -->
+      <mat-card-content>
+      <div class="row">
+        <div class="col-5 mt-2">
+            <mat-label id="instock">In-stock</mat-label></div>
+        <div class="col">
+            <input type="text" class="form-control" readonly/>
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-5 mt-2">
+            <mat-label id="instock" >Arraivals</mat-label></div>
+        <div class="col">
+            <input type="text" class="form-control" />
+        </div>
+      </div>
+      <div class="row mt-2">
+        <div class="col-5 mt-2">
+            <mat-label id="instock">Total</mat-label></div>
+        <div class="col">
+            <input type="text" class="form-control"/>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col"></div>
+        <div class="col mt-3">
+            <button mat-raised-button color="accent">Add</button>
+          </div>
+
+      </div>
+      
+    </mat-card-content>
+      
+    </mat-card>
+  </div>

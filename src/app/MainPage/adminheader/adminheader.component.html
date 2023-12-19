@@ -1,0 +1,57 @@
+<nav class="nav navbar-expand-lg navbar-light bg-info" id="navbar">
+    <div class="container">
+        <h1 class="text-center" id="h1">Daily Water Enterprises</h1>
+        <img src="../../../assets/images/Home/Book-Paani-Online-Logo-300x60.png" id="paani" />
+        <div class="collapse navbar-collapse" id="titles">
+            <img src="../../../assets/images/Home/thiru.gif" id="thiru" />
+            <img src="../../../assets/images/Home/company.png" id="logo" />
+            <!-- <img src="../../../assets/images/Home/catteg.png" id="catteg" /> -->
+        </div>
+        <div class="button">
+            <button mat-button>Home
+                <mat-icon>home</mat-icon>
+            </button>
+            <button mat-button>Stocks Entries
+                <mat-icon>assignment_turned_in</mat-icon>
+            </button>
+            <button mat-button [matMenuTriggerFor]="register">Orders
+                <mat-icon>assignment</mat-icon></button>
+            <mat-menu #register="matMenu">
+                <button mat-menu-item>Daily Orders
+                    <mat-icon>grade</mat-icon>
+                </button>
+                <button mat-menu-item>Bulk Orders
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+            </mat-menu>
+            <button mat-button>Staff Reg
+                <mat-icon>accessibility_new</mat-icon>
+            </button>
+            <button mat-button>Vendors
+                <mat-icon>group</mat-icon>
+            </button>
+            <button mat-button>Enquires
+                <mat-icon>perm_phone_msg</mat-icon>
+            </button>
+            <button mat-button>Services
+                <mat-icon> local_shipping</mat-icon>
+            </button>
+            <button mat-button [matMenuTriggerFor]="account">Account
+                <mat-icon>account_box</mat-icon></button>
+            <mat-menu #account="matMenu">
+                <button mat-menu-item>UserAcc
+                    <mat-icon>account_circle</mat-icon>
+                </button>
+                <button mat-menu-item>
+                    <mat-icon> local_printshop</mat-icon>Statements</button>
+                <button mat-menu-item>Wallet
+                    <mat-icon>account_balance_wallet</mat-icon>
+                </button>
+            </mat-menu>
+            <button mat-button class="bg-danger">
+                <mat-icon>power_settings_new</mat-icon>
+            </button>
+        </div>
+    </div>
+</nav>
+

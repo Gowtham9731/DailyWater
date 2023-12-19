@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './user/login/login.component';
 import { HomeComponent } from './user/home/home.component';
 import { SignInComponent } from './user/sign-in/sign-in.component';
-// import { GeneralComponent } from './user/register/general/general.component';
 import { RegisterComponent } from './user/register/register.component';
 import { ProfileComponent } from './user/profile/profile.component';
 import { HeaderComponent } from './MainPage/header/header.component';
@@ -17,6 +16,11 @@ import { AboutusComponent } from './user/aboutus/aboutus.component';
 import { GeneralMemberComponent } from './user/register/general-member/general-member.component';
 import { PremiumMemberComponent } from './user/register/premium-member/premium-member.component';
 import { OrdersComponent } from './Admin/orders/orders.component';
+import { ContactusComponent } from './user/contactus/contactus.component';
+import { TransportsComponent } from './Admin/transports/transports.component';
+import { StackentryComponent } from './Admin/stackentry/stackentry.component';
+import { StaffentryComponent } from './Admin/Staff/staffentry/staffentry.component';
+import { AdminheaderComponent } from './MainPage/adminheader/adminheader.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -33,9 +37,16 @@ const routes: Routes = [
   {path:'payment',component:PaymentComponent},
   {path:'adminhome',component:AdminhomeComponent},
   {path:'aboutus',component:AboutusComponent},
-  {path:'generalmember',component:GeneralMemberComponent},
+  {path:'contactus',component:ContactusComponent},
+  {path:'transport',component:TransportsComponent},
   {path:'premiummember',component:PremiumMemberComponent},
+  {path:'generalmember',component:GeneralMemberComponent},
   {path:'orders',component:OrdersComponent},
+  {path:'stackentry',component:StackentryComponent},
+  {path:'staffentry',component:StaffentryComponent},
+  {path:'adminheader',component:AdminheaderComponent},
+  
+
 ];
 
 @NgModule({

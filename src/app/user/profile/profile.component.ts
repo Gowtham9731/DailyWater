@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class ProfileComponent {
 gendervalue: any;
+gender: any;
 
 Edit() {
 throw new Error('Method not implemented.');
