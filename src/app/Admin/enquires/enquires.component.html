@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2 class="text-center">FeedBack Page</h2>
+      <table border="5" class="table table-bordered table-sm ">
+        <thead >
+          <tr>
+            <th class="p-1 text-center">SlNum</th>
+            <th class="p-5">Name</th>
+            <th class="p-5">MobileNumber</th>
+            <th class="p-5">Email</th>
+            <th class="p-5">Complaint</th>
+            <th class="p-2">Actions</th>
+            <!-- <th class="p-4">mobnum</th> -->
+          </tr>
+        </thead>
+        <!-- <hr class="border-bottom border-1 border-dark"> -->
+        <tbody>
+          <tr *ngFor="let user of complain" class="hoverable">
+            <td class="text-center">{{ user.id }}</td>
+            <td>{{ user.name }}</td>
+            <td>{{ user.mobnum }}</td>
+            <td>{{ user.email}}</td>
+            <td>{{ user.complaint}}</td>
+            <!-- <td>{{ user.quiry }}</td> -->
+            <td class="text-center"><button mat-raised-button color="primary">Update</button></td>
+            <td class="text-center"><button mat-raised-button color="accent">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

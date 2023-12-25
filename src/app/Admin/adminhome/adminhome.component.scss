@@ -19,9 +19,28 @@ animation: gradient 8s ease infinite;
 .button{
     margin-left: 150px;
 }
-
-
 .adminhomebg{
-    background-color: #878a89;
+    // background-color: #878a89;
+    background-image: url('../../../assets/images/Admin/adminhome-fish.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+#attenance{
+    position: absolute;
+    margin-top: 2rem;
+    margin-left: 2rem;
+    display: flex;
+    width: 20rem;
+}
+.staff{
+    display:flex;
+    width:15rem;
+}
+.ordersdetail{
+    position: absolute;
+    margin-top: 10rem;
+    margin-left: 2rem;
+    display: flex;
+    width: 20rem;
 }

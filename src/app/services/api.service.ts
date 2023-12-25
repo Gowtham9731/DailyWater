@@ -37,5 +37,12 @@ export class ApiService {
   getdata (data:any){
     return this.httpCliet.get("https://retoolapi.dev/BCxzLm/signup"+"?"+data);
   }
+  getComplaintDaata (data:any){
+    return this.httpCliet.get("https://retoolapi.dev/jnIL0K/enquiry"+"?"+data);
+  }
+  getStockEntry (data:any){
+    return this.httpCliet.get("https://retoolapi.dev/UbKkRw/stockEntry"+"?"+data);
+  }
+
 
 }

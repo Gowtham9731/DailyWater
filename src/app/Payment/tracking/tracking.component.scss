@@ -1,0 +1,36 @@
+mat-card {
+  width: 250px;
+  // height: 400px;
+  background-color: rgb(164, 164, 164);
+  // display: flex;
+  margin: 1rem;
+
+}
+.offer{
+  font-size: 1.5rem;
+  font-weight: bolder;
+}
+.offeramount{
+  font-size: 3rem;
+  font-weight: bolder;
+  color: rgb(255, 255, 0);
+}
+.title{
+  font-size: 1.8rem;
+  font-weight: bolder;
+  color: rgb(250, 250, 250);
+}
+
+// next Update...
+
+// .matcard{
+//   display: flex;
+//   flex-wrap: wrap;
+//   gap: 38px;
+// }
+
+.img {
+  width: 100px;
+  // height: 100px;
+  background-color: rgb(164, 164, 164);
+}

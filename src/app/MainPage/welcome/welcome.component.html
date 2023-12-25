@@ -1,23 +1,23 @@
-<!-- <div class="container">
-    <div class="row" *ngIf="sessionStore.getItem('usertype')=='user'" >
+<div class="container">
+    <div class="row" *ngIf="userHeader">
         <app-header></app-header>
     </div>
-    <div class="row" *ngIf="sessionStore.getItem('usertype')=='admin'" >
+    <div class="row" *ngIf="adminHeader">
         <app-adminheader></app-adminheader>
     </div>
     <div class="row">
         <router-outlet></router-outlet>
     </div>
-    
-    <div class="row" *ngIf="sessionStore.getItem('usertype')=='admin'" >
-        <app-footer></app-footer>
-    </div>
-    <div class="row" *ngIf="sessionStore.getItem('usertype')=='user'" >
-        <app-footer></app-footer>
-    </div>
-</div> -->
 
-<div class="container">
+    <div class="row" *ngIf="adminHeader">
+        <app-footer></app-footer>
+    </div>
+    <div class="row" *ngIf="userHeader">
+        <app-footer></app-footer>
+    </div>
+</div>
+
+<!-- <div class="container">
     <div class="row" *ngIf="sessionStore.getItem('usertype') == 'user' || sessionStore.getItem('usertype') == 'admin'">
         <app-header *ngIf="sessionStore.getItem('usertype') == 'user'"></app-header>
         <app-adminheader *ngIf="sessionStore.getItem('usertype') == 'admin'"></app-adminheader>
@@ -30,4 +30,4 @@
     <div class="row">
         <app-footer></app-footer>
     </div>
-</div>
+</div> -->

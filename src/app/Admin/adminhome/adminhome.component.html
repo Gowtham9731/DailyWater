@@ -1,23 +1,64 @@
 <div class="container" class="adminhomebg">
   <div class="row">
+    <!-- <div class="col"></div> -->
     <div class="col"></div>
-    <!-- <div class="col">
-            <mat-card *ngFor="let card of cards">
-                <div class="row">
-                    <div class="col"></div>
-                    <div class="col-3 p-2">
-                       <mat-label>{{card.product}}</mat-label> 
-                    </div>
-                    <div class="col p-2">
-                    </div>
-                </div>
-            </mat-card>
-        </div> -->
+    <div class="col">
+      <div class="col" id="attenance">
+        <mat-card class="staff">
+          <mat-card-title class="text-center">Staff Attenance</mat-card-title>
+          <div class="row">
+            <div class="col">
+              <mat-label> Total Staffs :</mat-label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <mat-label>Today's Present:</mat-label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+        </mat-card>
+      </div>
+      <div class="col">
+        <mat-card class="ordersdetail">
+          <mat-card-title class="text-center">Orders Details</mat-card-title>
+          <div class="row">
+            <div class="col">
+              <mat-label> Todays Orders :</mat-label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <mat-label>Today's Delivery:</mat-label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+          <div class="row mt-2">
+            <div class="col">
+              <mat-label>Pending Orders:</mat-label>
+            </div>
+            <div class="col">
+              <input type="text" class="form-control" />
+            </div>
+          </div>
+        </mat-card>
+      </div>
+    </div>
     <div class="col">
       <h2 class="text-center">Stock Entries</h2>
       <table border="4">
         <thead>
-          <tr >
+          <tr>
             <th class="p-4">SlNum</th>
             <th class="p-4">Products</th>
             <th class="p-4">StockCounts</th>
@@ -32,6 +73,7 @@
         </tbody>
       </table>
     </div>
-    <div class="col"></div>
+    <!-- <div class="col"></div> -->
   </div>
+  
 </div>

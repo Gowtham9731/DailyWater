@@ -1,0 +1,113 @@
+<h1 class="text-center">Products Stock Entries</h1>
+<div *ngFor="let card of cards; let i = index" id="ngfor">
+  <div class="card">
+    <div class="row">
+      <div class="col">
+        <img [src]="card.image" alt="{{ card.title }}" class="proimg" />
+      </div>
+      <div class="col">
+        <h3>{{ card.title }} </h3>
+      </div>
+      <div class="col">
+        <div class="col" id="input{{ i }}">
+          Stock
+        </div>
+        <div class="col" id="stock">
+          {{ card.stock }}
+        </div>
+      </div>
+      <div class="col">
+        <div class="col">
+          <label>Input:</label>
+        </div>
+        <div class="col">
+          <input type="text" id="input{{ i }}" class="form-control text-center" (keyup)="add(i)"
+            [(ngModel)]="inputValues[i]" />
+        </div>
+      </div>
+      <div class="col">
+        <div class="col ms-4">
+          Total
+        </div>
+        <div class="col ms-4 mt-2" id="stock">
+          {{ totalValues[i] }}
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-2"></div>
+  <div class="col-3 mt-2">
+    <button mat-raised-button color="accent">Input Grand Total: {{ getGrandinput() }}</button>
+  </div>
+  <div class="col mt-2">
+    <button mat-raised-button color="accent">Grand Total: {{ getGrandTotal() }}</button>
+  </div>
+  <div class="col mt-2">
+    <button mat-raised-button color="accent" (click)="inputsentry()">Submit</button>
+  </div>
+</div>
+
+
+
+<!-- Dummy Trail -->
+
+
+<!-- <h1 class="text-center">Products Stock Entries</h1>
+<div *ngFor="let card of cards; let i = index" id="ngfor">
+  <div class="card">
+    <div class="row">
+      <div class="col">
+        <img [src]="card.image" alt="{{ card.title }}" class="proimg"/>
+      </div>
+      <div class="col">
+        <h3>{{ card.title }} </h3>
+      </div>
+      <div class="col">
+        <div class="col" id="input{{ i }}">
+          Stock
+        </div>
+        <div class="col" id="stock">
+          {{ card.stock }}
+        </div>
+      </div>
+      <div class="col">
+        <div class="col">
+          <label>Input:</label>
+        </div>
+        <div class="col">
+          <input type="number" id="input{{ i }}" class="form-control" (keyup)="add(i)"/>
+        </div>
+      </div>
+      <div class="col">
+        <div class="col ms-4">
+          Total
+        </div>
+        <div class="col ms-4 mt-2" id="stock">
+          {{ totalValues[i] }}
+        </div>
+      </div>
+    </div>
+    <div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
+  <div class="col-1"></div>
+  <div class="col-2"></div>
+  <div class="col-3 mt-2">
+    <button mat-raised-button color="accent">Input Grand Total: {{ getGrandinput() }}</button>
+  </div>
+  <div class="col mt-2">
+    <button mat-raised-button color="accent">Grand Total: {{ getGrandTotal() }}</button>
+  </div>
+  <div class="col mt-2">
+    <button mat-raised-button color="accent" (click)="inputsentry()">Submit</button>
+  </div>
+</div> -->

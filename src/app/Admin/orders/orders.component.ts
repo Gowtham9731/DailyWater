@@ -7,15 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class OrdersComponent {
 
-  checked = false;
-  indeterminate = false;
-  labelPosition: 'before' | 'after' = 'after';
-  disabled = false;
-username: any;
-email: any;
-mobnum: any;
-password: any;
-presentations: any;
 
 
 }

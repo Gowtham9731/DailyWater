@@ -1,1 +1,32 @@
-<p>tracking works!</p>
+
+<div class="container-fluied">
+    <div class="row">
+       <mat-card *ngFor="let card of cards" class="matcard">
+        <img mat-card-image [src]="card.image" alt="{{ card.title }}">
+        <mat-card-header>
+            <mat-card-title class="title">{{ card.title }}</mat-card-title>
+          </mat-card-header>
+          <div class="row mt-2">
+            <div class="col-1"></div>
+            <div class="col">
+                <mat-label class="offer">Offer<br>
+                </mat-label>
+                <h1 class="offeramount mt-2">{{card.offer}}</h1>
+            </div>
+            <div class="col">
+                <h3>Price<br>   
+                    <s>{{card.price}}</s>                
+                </h3>
+                
+            </div>
+          </div>
+          <mat-card-content>
+            <!-- {{card.content}} -->
+            <button mat-raised-button class="ms-4" (click)="addToCart(card)" color="primary">Add to Cart
+                <mat-icon>shopping_cart</mat-icon>
+            </button>
+          </mat-card-content>
+       </mat-card>
+    </div>
+</div>
+

@@ -15,12 +15,19 @@ import { AdminhomeComponent } from './Admin/adminhome/adminhome.component';
 import { AboutusComponent } from './user/aboutus/aboutus.component';
 import { GeneralMemberComponent } from './user/register/general-member/general-member.component';
 import { PremiumMemberComponent } from './user/register/premium-member/premium-member.component';
-import { OrdersComponent } from './Admin/orders/orders.component';
 import { ContactusComponent } from './user/contactus/contactus.component';
 import { TransportsComponent } from './Admin/transports/transports.component';
 import { StackentryComponent } from './Admin/stackentry/stackentry.component';
 import { StaffentryComponent } from './Admin/Staff/staffentry/staffentry.component';
 import { AdminheaderComponent } from './MainPage/adminheader/adminheader.component';
+import { StaffAttendenceComponent } from './Admin/Staff/staff-attendence/staff-attendence.component';
+import { AccountsComponent } from './Admin/accounts/accounts.component';
+import { EnquiresComponent } from './Admin/enquires/enquires.component';
+import { DeliveryserviceComponent } from './user/deliveryservice/deliveryservice.component';
+import { ProductsEntryComponent } from './Admin/Stocks/products-entry/products-entry.component';
+import { ProductsRegComponent } from './Admin/Stocks/products-reg/products-reg.component';
+import { DailyOrdersComponent } from './Admin/orders/daily-orders/daily-orders.component';
+import { TrackingComponent } from './Payment/tracking/tracking.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -38,13 +45,20 @@ const routes: Routes = [
   {path:'adminhome',component:AdminhomeComponent},
   {path:'aboutus',component:AboutusComponent},
   {path:'contactus',component:ContactusComponent},
-  {path:'transport',component:TransportsComponent},
+  {path:'transports',component:TransportsComponent},
   {path:'premiummember',component:PremiumMemberComponent},
   {path:'generalmember',component:GeneralMemberComponent},
-  {path:'orders',component:OrdersComponent},
   {path:'stackentry',component:StackentryComponent},
   {path:'staffentry',component:StaffentryComponent},
   {path:'adminheader',component:AdminheaderComponent},
+  {path:'staffattendence',component:StaffAttendenceComponent},
+  {path:'accounts',component:AccountsComponent},
+  {path:'enquires',component:EnquiresComponent},
+  {path:'services',component:DeliveryserviceComponent},
+  {path:'productentry',component:ProductsEntryComponent},
+  {path:'productreg',component:ProductsRegComponent},
+  {path:'dailyorders',component:DailyOrdersComponent},
+  {path:'tracking',component:TrackingComponent},
   
 
 ];

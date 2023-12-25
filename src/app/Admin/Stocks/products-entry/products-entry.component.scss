@@ -1,0 +1,27 @@
+.proimg{
+    width:5rem;
+}
+.card{
+    display:flex;
+    width:50rem;
+    height: 5rem;
+    background-color: rgb(158, 149, 255);
+}
+h3{
+    display:flex;
+    font-size:1.2rem;
+    // justify-content:space-around;
+    font-weight: bolder;
+    color: rgb(255, 3, 32);
+}
+#stock{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+h1{
+    display:flex;
+    font-size:2.3rem;
+    font-weight: bolder;
+    justify-content: center;
+
+}

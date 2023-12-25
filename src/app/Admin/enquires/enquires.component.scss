@@ -1,0 +1,21 @@
+.hoverable:hover {
+    // background-color: #7c82f1;
+    cursor: pointer;
+    background: linear-gradient(-45deg, #0973ff, #e73c7e, #d5cf23, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 8s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}

@@ -15,6 +15,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatPaginatorModule} from '@angular/material/paginator';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -29,9 +30,8 @@ import { HeaderComponent } from './MainPage/header/header.component';
 import { FooterComponent } from './MainPage/footer/footer.component';
 import { WelcomeComponent } from './MainPage/welcome/welcome.component';
 import { AdminhomeComponent } from './Admin/adminhome/adminhome.component';
-import { OrdersComponent } from './Admin/orders/orders.component';
+// import { OrdersComponent } from './Admin/orders/orders.component';
 import { TransportsComponent } from './Admin/transports/transports.component';
-import { VendorsComponent } from './Admin/vendors/vendors.component';
 import { EnquiresComponent } from './Admin/enquires/enquires.component';
 import { AccountsComponent } from './Admin/accounts/accounts.component';
 import { OfferzoneComponent } from './Productpage/offerzone/offerzone.component';
@@ -45,6 +45,13 @@ import { StackentryComponent } from './Admin/stackentry/stackentry.component';
 import { StaffentryComponent } from './Admin/Staff/staffentry/staffentry.component';
 import { AdminheaderComponent } from './MainPage/adminheader/adminheader.component';
 import { StaffAttendenceComponent } from './Admin/Staff/staff-attendence/staff-attendence.component';
+import { ContactusComponent } from './user/contactus/contactus.component';
+import { DeliveryserviceComponent } from './user/deliveryservice/deliveryservice.component';
+import { ProductsEntryComponent } from './Admin/Stocks/products-entry/products-entry.component';
+import { ProductsRegComponent } from './Admin/Stocks/products-reg/products-reg.component';
+import { DailyOrdersComponent } from './Admin/orders/daily-orders/daily-orders.component';
+import { BulkOrdersComponent } from './Admin/orders/bulk-orders/bulk-orders.component';
+// import { ApiService } from './services/api.service';
 
 
 
@@ -62,9 +69,8 @@ import { StaffAttendenceComponent } from './Admin/Staff/staff-attendence/staff-a
     FooterComponent,
     WelcomeComponent,
     AdminhomeComponent,
-    OrdersComponent,
+    // OrdersComponent,
     TransportsComponent,
-    VendorsComponent,
     EnquiresComponent,
     AccountsComponent,
     AddToCartComponent,
@@ -76,6 +82,12 @@ import { StaffAttendenceComponent } from './Admin/Staff/staff-attendence/staff-a
     StaffentryComponent,
     AdminheaderComponent,
     StaffAttendenceComponent,
+    ContactusComponent,
+    DeliveryserviceComponent,
+    ProductsEntryComponent,
+    ProductsRegComponent,
+    DailyOrdersComponent,
+    BulkOrdersComponent,
   ],
   imports: [
     BrowserModule,

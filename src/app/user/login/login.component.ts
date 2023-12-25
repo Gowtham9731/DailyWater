@@ -54,16 +54,10 @@ userType: any;
   }
 
   signUpuser() {
-    // alert(this.loginChck);
-    // alert(this.user);
     if (this.validateUserData()) {
-
       //step1 getdata
       //step2 create obj
-
       let userdata = {
-        // user: this.user,
-        // admin: this.admin,
         usertype:this.usertype,
         username: this.username,
         mobnum: this.mobnum,
