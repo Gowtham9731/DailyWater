@@ -1,82 +1,79 @@
-<div class="container-fluied" id="gmreg">
-<h1 class="text-center">General Membership</h1>
-
+<div class="container">
+    
     <div class="row">
-        <div class="col-2"></div>
+      <form form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+        <h1 class="text-center">GeneRal Membership</h1>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput formControlName="name">
+          <mat-error *ngIf="myForm.get('name')?.hasError('required')">Name is required</mat-error>
+        </mat-form-field>
+  
         <div class="col">
-            <form class="example-form" >
-                <mat-form-field class="example-full-width">
-                    <mat-label>Your Name</mat-label>
-                    <input matInput placeholder="Ex.Mr.Gowtham P" name="yourname" [(ngModel)]="yourname" [ngModelOptions]="{standalone: true}">
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                    <mat-label>Mobile Number</mat-label>
-                    <input matInput placeholder="Example. 973149" name="mobnum" [(ngModel)]="mobnum" [ngModelOptions]="{standalone: true}">
-                </mat-form-field>
-                <mat-form-field class="example-full-width">
-                    <mat-label>E-mail ID</mat-label>
-                    <input matInput placeholder="Example. gowtham@gmail.com" name="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" >
-                </mat-form-field>
-                <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" >
-                    <mat-expansion-panel-header>
-                        Select Gender :
-                    </mat-expansion-panel-header>
-                    <mat-radio-group aria-label="Select an option" [(ngModel)]="gender"  name="gender" [ngModelOptions]="{standalone: true}">
-                            <mat-radio-button value="male" class="p-4">Male</mat-radio-button>
-                            <mat-radio-button value="female" class="p-4">Female</mat-radio-button>
-                            <mat-radio-button value="others" class="p-4">Others</mat-radio-button>
-                        </mat-radio-group>
-                            <!-- <button mat-button color="primary" class="form-control" (click)="nextStep()">Next</button> -->
-                </mat-expansion-panel>
-                <mat-accordion >
-                    <mat-expansion-panel [expanded]="step === 1" (opened)="setStep(1)" hideToggle>
-                        <!-- <mat-expansion-panel-header>
-                                Select Location :
-                        </mat-expansion-panel-header> -->
-                        <mat-expansion-panel-header>
-                            <mat-label>Home Address...</mat-label>
-                        </mat-expansion-panel-header>
-                        <mat-expansion-panel-header>
-                            <textarea matInput placeholder="Enter Home Address..." name="homeAddr" class="form-control" [(ngModel)]="homeAddr" [ngModelOptions]="{standalone: true}"></textarea>
-                        </mat-expansion-panel-header>
-                        <mat-action-row>
-                            <!-- <button mat-button color="primary" (click)="nextStep()">Next</button> -->
-                        </mat-action-row>
-                    </mat-expansion-panel>
-                    <mat-expansion-panel [expanded]="step === 2" (opened)="setStep(2)" hideToggle>
-                        <mat-expansion-panel-header>
-                            <mat-label>Apartment Address...</mat-label>
-                        </mat-expansion-panel-header>
-                        <mat-expansion-panel-header>
-                            <textarea matInput placeholder="Enter Apartment Address..." name="apartmentAddr" class="form-control" [(ngModel)]="apartmentAddr" [ngModelOptions]="{standalone: true}"></textarea>
-                        </mat-expansion-panel-header>
-                        <!-- <mat-action-row>
-                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                            <button mat-button color="primary" (click)="nextStep()">Next</button>
-                        </mat-action-row> -->
-                    </mat-expansion-panel>
-                    <mat-expansion-panel [expanded]="step === 3" (opened)="setStep(3)" hideToggle>
-                        <mat-expansion-panel-header>
-                            <mat-panel-title>
-                                <mat-label>Office Address...</mat-label>
-                            </mat-panel-title>
-                        </mat-expansion-panel-header>
-                        <mat-expansion-panel-header>
-                            <textarea matInput placeholder="Enter Office Address..." class="form-control" name="officeAddr" [(ngModel)]="officeAddr" [ngModelOptions]="{standalone: true}"></textarea>
-                        </mat-expansion-panel-header>
-                        <!-- <mat-action-row>
-                            <button mat-button color="warn" (click)="prevStep()">Previous</button>
-                            <button mat-button color="primary" (click)="nextStep()">End</button>
-                        </mat-action-row> -->
-                    </mat-expansion-panel>
-                </mat-accordion>
-                <mat-checkbox> Apply Terms & Conditions...
-
-                </mat-checkbox>
-            </form>
-            <button mat-stroked-button class="bg-warning form-control mt-3" (click)="submitData()">Submit</button>
-        <br>
+          <mat-form-field>
+            <mat-label>Mobile Number</mat-label>
+            <input matInput formControlName="mobnum">
+            <mat-error *ngIf="myForm.get('mobnum')?.hasError('required')">Mobile Number is required</mat-error>
+            <mat-error *ngIf="myForm.get('mobnum')?.hasError('pattern')">Invalid mobile number</mat-error>
+          </mat-form-field>
         </div>
-        <div class="col-2"></div>
+        <div class="col">
+          <mat-form-field>
+            <mat-label>Date of Birth</mat-label>
+            <input matInput [matDatepicker]="dobPicker" formControlName="dob">
+            <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+            <mat-datepicker #dobPicker></mat-datepicker>
+            <mat-error *ngIf="myForm.get('dob')?.hasError('required')">Date of Birth is required</mat-error>
+          </mat-form-field>
+        </div>
+        <div class="col check">
+          <mat-label>Gender</mat-label>
+          <mat-radio-group formControlName="gender">
+            <mat-radio-button value="male">Male</mat-radio-button>
+            <mat-radio-button value="female">Female</mat-radio-button>
+            <mat-radio-button value="other">Other</mat-radio-button>
+          </mat-radio-group>
+          <mat-error *ngIf="myForm.get('gender')?.hasError('required')">Gender is required</mat-error>
+        </div>
+        <div class="col">
+          <div class="col">
+            <mat-form-field>
+              <mat-label>Permenant Address</mat-label>
+              <textarea matInput formControlName="permanantaddress"></textarea>
+          <mat-error *ngIf="myForm.get('permanantaddress')?.hasError('required')">Permenant Address is required</mat-error>
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field>
+              <mat-label>Temporary Address</mat-label>
+              <textarea matInput formControlName="temporaryaddress"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+        <p><b>*</b> General Membership is <u><b>Ontime Delivery</b></u> and <u><b>General Mineral Water.</b></u>
+        </p>
+        <br>
+        <div class="col check">
+          <mat-checkbox formControlName="termsAndConditions">
+            I agree to the terms and conditions
+          </mat-checkbox>
+          <mat-error *ngIf="myForm.get('termsAndConditions')?.hasError('requiredTrue')">You must agree to the terms and
+            conditions</mat-error>
+        </div>
+        <br>
+        <div class="col">
+          <div class="row">
+            <div class="col-3"></div>
+            <div class="col">
+              <button mat-raised-button class="bg-warning">Reset</button>
+            </div>
+            <div class="col">
+              <button mat-raised-button color="primary" type="submit">Submit</button>
+            </div>
+          </div>
+        </div>
+        <br>
+        
+      </form>
     </div>
-</div>
+  </div>

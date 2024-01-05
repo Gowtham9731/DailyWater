@@ -1,14 +1,31 @@
-
-  .example-full-width {
-    width: 100%;
-  }
-  h1{
-    background:linear-gradient(to right, rgb(139, 24, 255) 10%,rgb(61, 255, 3) 20%,red 100%);
-    background-clip: text;
-    color: transparent;
-    font-size: 2rem;
-    font-weight: bolder;
-  }
-  #gmreg{
-    background-color: aqua;
-  }
+form{
+  width: 40rem;
+  background-color: rgb(161, 161, 161);
+  display: block;
+  
+}
+mat-form-field{
+  margin: 0% 10%;
+  display: flex;
+}
+.row{
+  justify-content: center;
+}
+.check{
+  margin: 0% 10%;
+ 
+  
+}
+p{
+  margin: 0% 10%;
+}
+h1{
+  background:linear-gradient(to right, rgb(129, 3, 255) 10%,rgb(255, 3, 247) 20%,red 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.container{
+  background-color: rgb(22, 26, 57);
+}

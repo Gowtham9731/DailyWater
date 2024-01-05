@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
+import { ApiService } from 'src/app/services/api.service';
+
 
 @Component({
   selector: 'app-offerzone',
@@ -7,14 +9,17 @@ import { MatDialog } from '@angular/material/dialog';
   styleUrls: ['./offerzone.component.scss']
 })
 export class OfferzoneComponent {
-  // constructor(public dialog: MatDialog) {}
+image: any;
+title: any;
+offer: any;
+price: any;
+patientReg:boolean=false;
 
-  // openDialog(enterAnimationDuration: string, exitAnimationDuration: string): void {
-  //   this.dialog.open(, {
-  //     width: '250px',
-  //     enterAnimationDuration,
-  //     exitAnimationDuration,
-  //   });
-  // }
+cardData: any;
 
+parent(){
+  this.patientReg = true;
+}
+
+  
 }

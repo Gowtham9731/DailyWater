@@ -33,18 +33,24 @@
         </div>
         <div class="col-3 mt-4 ">
             <mat-card class="img">
-                <img mat-card-image src="../../../assets/images/Products/20-litter.jpeg" [src]="imgSrc" alt="20-litters Jar Combo">
+                <!-- <img mat-card-image src="../../../assets/images/Products/20-litter.jpeg" [src]="imgSrc" alt="20-litters Jar Combo"> -->
+                <!-- {{image}} -->
+        <img [src]="image" alt="{{ title }}" />
+
             </mat-card>
         </div>
         <div class="col mt-4">
-            <h3 class="protitle">Kinley 20 Litre jar Packaged Drinking Water</h3>
+            <h3 class="protitle">
+                <!-- Kinley 20 Litre jar Packaged Drinking Water -->
+                {{title}}
+            </h3>
             <div class="row mt-4">
                 <div class="col-3" id="offer">Offer</div>
                 <div class="col-4 price">Price</div>
             </div>
             <div class="row mt-4">
-                <div class="col" id="cost1" [(ngModel)]="offer" name="offer">{{offer}}</div>
-                <div class="col" id="cost2"><s>{{cost}}</s></div>
+                <div class="col" id="cost1">{{offer}}</div>
+                <div class="col" id="cost2"><s>{{price}}</s></div>
                 <div class="col"></div>
                 <div class="col"></div>
             </div>
@@ -96,4 +102,14 @@
         </div>
     </div>
 </div>
+
+
+
+
+<!-- <div>
+    <h2>{{ title }}</h2>
+    <img [src]="image" alt="{{ title }}" />
+    <p>Offer: {{ offer }}</p>
+    <p>Price: {{ price }}</p>
+  </div> -->
 

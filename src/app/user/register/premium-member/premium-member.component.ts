@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-premium-member',
@@ -8,71 +9,52 @@ import { Component } from '@angular/core';
 })
 export class PremiumMemberComponent {
 
-  constructor(private httpClient:HttpClient){}
-
-  // membership: string='';
-   yourname: string='';
-   mobnum: any;
-   email: any;
-   male: string='';
-   female:string='';
-   others:string='';
-   Home: string='';
-   Apartment: string='';
-   Office: string='';
-   joindate: any;
-   homeaddr:string='';
-   aparmentaddr:string='';
-   officeaddr:any;
- //  registerApi:string="https://retoolapi.dev/a89ajD/register";
   
- submitData() {
+  myForm: FormGroup;
 
-   let userData={
-    //  membership:this.membership,
-     yourname:this.yourname,
-     mobnum:this.mobnum,
-     email:this.email,
-     male:this.male,
-     female:this.female,
-     others:this.others,
-     Home:this.Home,
-     Apartment:this.Apartment,
-     Office:this.Office,
-     joindate:this.joindate,
-     homeaddr:this.homeaddr,
-     aparmentaddr:this.aparmentaddr,
-     officeaddr:this.officeaddr
-   }
-   this.httpClient.post("https://retoolapi.dev/a89ajD/register",userData).subscribe(
-       () => {
-         alert("Registered Successfully...");
-         setTimeout(()=>{
-           // this.router.navigate(['']);
-         }, 3000);
-       
-       },
-       error => {
-         // this.msg = "Encounterd a problem. Unable to create a user at this moment... Mannichooo... Plz try try again.";
-       }
-     );
-     this.Reset();
-   }
-   Reset() {
-  //  this. membership ='';
-   this.mobnum='';
-   this.yourname='';
-   this.email='';
-   this.male='';
-   this.female='';
-   this.others='';
-   this.Home='';
-   this.Apartment='';
-   this.Office='';
-   this.joindate='';
-   this.homeaddr='';
-   this.aparmentaddr='';
-   this.officeaddr='';
-   }
+  constructor(private fb: FormBuilder, private http: HttpClient) {
+    this.myForm = this.fb.group({
+      name: ['', Validators.required],
+      mobnum: ['', [Validators.required, Validators.pattern(/^\d{10}$/)]],
+      dob: ['', Validators.required],
+      gender: ['', Validators.required],
+      permanantaddress:['', Validators.required],
+      temporaryaddress:['',],
+      termsAndConditions: [false, Validators.requiredTrue],
+
+      // Default values for date and time
+      submittedDate: [new Date().toISOString().split('T')[0], Validators.required],
+      submittedTime: [new Date().toISOString().split('T')[1].substring(0, 5), Validators.required],
+      membership:['Premium']
+      
+    });
+  }
+
+  onSubmit() {
+    if (this.myForm.valid) {
+      // Prepare the data to be sent to the API
+      const formData = this.myForm.value;
+      
+      // You can replace the URL with your actual API endpoint
+      const apiUrl = 'https://retoolapi.dev/a89ajD/register';
+
+      // Send the data to the API
+      this.http.post(apiUrl, formData).subscribe(
+        response => {
+          alert("Form submitted successfully");
+          console.log('Form submitted successfully', response);
+          // Handle success, e.g., show a success message
+        },
+        error => {
+          console.error('Error submitting form', error);
+          // Handle error, e.g., show an error message
+        }
+      );
+    } else {
+      alert("Please Fill Required Fields...");
+      // Form is invalid, show validation errors or do something else
+    }
+  }
+
     
 }

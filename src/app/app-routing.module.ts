@@ -28,6 +28,7 @@ import { ProductsEntryComponent } from './Admin/Stocks/products-entry/products-e
 import { ProductsRegComponent } from './Admin/Stocks/products-reg/products-reg.component';
 import { DailyOrdersComponent } from './Admin/orders/daily-orders/daily-orders.component';
 import { TrackingComponent } from './Payment/tracking/tracking.component';
+import { StatementsComponent } from './Admin/statements/statements.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -59,6 +60,8 @@ const routes: Routes = [
   {path:'productreg',component:ProductsRegComponent},
   {path:'dailyorders',component:DailyOrdersComponent},
   {path:'tracking',component:TrackingComponent},
+  {path:'statements',component:StatementsComponent},
+
   
 
 ];

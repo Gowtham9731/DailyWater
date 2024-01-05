@@ -1,17 +1,28 @@
-#card{
-    margin-left: 250px;
-    // background-image: url('../../../assets/images/User/');
-    background-repeat: no-repeat;
-    background-size: cover;
+form{
+  width: 40rem;
+  background-color: rgb(31, 134, 134);
+  display: block;
 }
-#formbg{
-    background-color: rgb(104, 104, 104);
+mat-form-field{
+  margin: 0% 10%;
+  display: flex;
 }
-#circle {
-float: right;
-margin-right: 6px;
-margin-top: -30px;
-position: relative;
-z-index: 2;
-color: red;
+.row{
+  justify-content: center;
+}
+.check{
+  margin: 0% 10%;
+}
+p{
+  margin: 0% 10%;
+}
+h1{
+  background:linear-gradient(to right, rgb(129, 3, 255) 10%,rgb(255, 3, 247) 20%,red 100%);
+  background-clip: text;
+  color: transparent;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.container{
+  background-color: rgb(156, 154, 154);
 }

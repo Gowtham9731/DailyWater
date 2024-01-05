@@ -16,15 +16,15 @@
         </thead>
         <!-- <hr class="border-bottom border-1 border-dark"> -->
         <tbody>
-          <tr *ngFor="let user of complain" class="hoverable">
-            <td class="text-center">{{ user.id }}</td>
-            <td>{{ user.name }}</td>
-            <td>{{ user.mobnum }}</td>
-            <td>{{ user.email}}</td>
-            <td>{{ user.complaint}}</td>
+          <tr *ngFor="let complaint of complain" class="hoverable">
+            <td class="text-center">{{ complaint.id }}</td>
+            <td name="name">{{ complaint.name }}</td>
+            <td name="mobnum">{{ complaint.mobnum }}</td>
+            <td>{{ complaint.email}}</td>
+            <td>{{ complaint.complaint}}</td>
             <!-- <td>{{ user.quiry }}</td> -->
-            <td class="text-center"><button mat-raised-button color="primary">Update</button></td>
-            <td class="text-center"><button mat-raised-button color="accent">Delete</button></td>
+            <td class="text-center"><button mat-raised-button color="primary" (click)="editApi(complaint)">Update</button></td>
+            <td class="text-center"><button mat-raised-button type="button" color="accent" (click)="onDelete(row.id)">Delete</button></td>
           </tr>
         </tbody>
       </table>

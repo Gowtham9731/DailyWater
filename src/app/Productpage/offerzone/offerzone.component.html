@@ -1,109 +1,116 @@
-<div class="container" id="offerbg">
-  <div class="row mt-2">
-    <div class="col">
-      <mat-card class="card">
-        <img mat-card-image src="../../../assets/images/Products/20 litter 1+1.jpg" alt="20-litters Jar Combo">
-        <span><img mat-card-image src="../../../assets/images/Products/spl-offer.png" class="sploffer"></span>
-        <mat-card-content>
-          <h3>20 Litters jar Combo Offer</h3>
-          <div class="row">
-            <div class="col">
-              <label>Offer</label>
+<form>
+  <div class="container" id="offerbg" *ngIf="!patientReg">
+    <div class="row mt-2">
+      <div class="col">
+        <mat-card class="card">
+          <img mat-card-image src="../../../assets/images/Products/20 litter 1+1.jpg" alt="20-litters Jar Combo">
+          <span><img mat-card-image src="../../../assets/images/Products/spl-offer.png" class="sploffer"></span>
+          <mat-card-content>
+            <h3>20 Litters jar Combo Offer</h3>
+            <div class="row">
+              <div class="col">
+                <label>Offer</label>
+              </div>
+              <div class="col">
+                <label>Price</label>
+              </div>
             </div>
-            <div class="col">
-              <label>Price</label>
+            <div class="row">
+              <div class="col">
+                <label class="Offer">100</label>
+              </div>
+              <div class="col">
+                <label class="price">130</label>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label class="Offer">100</label>
+            <br>
+            <p>
+              20-litre can comes with a push tap and stand mechanism. This Push Tap & Stand helps to maintain hygiene &
+              easy to pour water.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a routerLink="/addtocart">
+              <button mat-raised-button color="primary">
+                <span class="material-icons">shopping_cart</span> Add to Cart </button></a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col">
+        <mat-card class="card">
+          <img mat-card-image src="../../../assets/images/Products/2-litter.jpeg" alt="2-litters Combo">
+          <span><img mat-card-image src="../../../assets/images/Products/offer.png" class="sploffer1"></span>
+          <mat-card-content>
+            <h3>2-litters Combo Offer</h3>
+            <div class="row">
+              <div class="col">
+                <label>Offer</label>
+              </div>
+              <div class="col">
+                <label>Price</label>
+              </div>
             </div>
-            <div class="col">
-              <label class="price">130</label>
+            <div class="row">
+              <div class="col">
+                <label class="Offer">50</label>
+              </div>
+              <div class="col">
+                <label class="price">70</label>
+              </div>
             </div>
-          </div>
-          <br>
-          <p>
-            20-litre can comes with a push tap and stand mechanism. This Push Tap & Stand helps to maintain hygiene &
-            easy to pour water.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a routerLink="/addtocart">
-          <button mat-raised-button color="primary">
-            <span class="material-icons">shopping_cart</span> Add to Cart  </button></a>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-    <div class="col">
-      <mat-card class="card">
-        <img mat-card-image src="../../../assets/images/Products/2-litter.jpeg" alt="2-litters Combo">
-        <span><img mat-card-image src="../../../assets/images/Products/offer.png" class="sploffer1"></span>
-        <mat-card-content>
-          <h3>2-litters Combo Offer</h3>
-          <div class="row">
-            <div class="col">
-              <label>Offer</label>
+            <br>
+            <p>
+              A long-lasting choice for short trips. The handle on the bottle makes it easier to carry it anywhere.
+              lightweight and affordable nature.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <a routerLink="/addtocart">
+              <button mat-raised-button color="primary">
+                <span class="material-icons">shopping_cart</span> Add to Cart </button></a>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col" >
+        <mat-card class="card">
+          <img mat-card-image src="../../../assets/images/Products/1-L-Bottle combo.jpg" alt="1-litter Combo"
+            [(ngModel)]="image">
+          <span><img mat-card-image src="../../../assets/images/Products/offer1.png" class="sploffer1"></span>
+          <mat-card-content>
+            <h3 [(ngModel)]="title">2-litters Combo Offer</h3>
+            <div class="row">
+              <div class="col">
+                <label>Offer</label>
+              </div>
+              <div class="col">
+                <label>Price</label>
+              </div>
             </div>
-            <div class="col">
-              <label>Price</label>
+            <div class="row">
+              <div class="col">
+                <label class="Offer" [(ngModel)]="offer">35</label>
+              </div>
+              <div class="col">
+                <label class="price" [(ngModel)]="price">50</label>
+              </div>
             </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label class="Offer">50</label>
-            </div>
-            <div class="col">
-              <label class="price">70</label>
-            </div>
-          </div>
-          <br>
-          <p>
-            A long-lasting choice for short trips. The handle on the bottle makes it easier to carry it anywhere.
-            lightweight and affordable nature.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a routerLink="/addtocart">
+            <br>
+            <p>
+              A long-lasting choice for short trips. The handle on the bottle makes it easier to carry it anywhere.
+              lightweight and affordable nature.
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <!-- <a routerLink="/addtocart"> -->
             <button mat-raised-button color="primary">
-              <span class="material-icons">shopping_cart</span> Add to Cart  </button></a>
-        </mat-card-actions>
-      </mat-card>
+              <span class="material-icons" (click)="parent()">shopping_cart</span> Add to Cart </button>
+            <!-- </a> -->
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
-    <div class="col">
-      <mat-card class="card">
-        <img mat-card-image src="../../../assets/images/Products/1-L-Bottle combo.jpg" alt="1-litter Combo">
-        <span><img mat-card-image src="../../../assets/images/Products/offer1.png" class="sploffer1"></span>
-        <mat-card-content>
-          <h3>2-litters Combo Offer</h3>
-          <div class="row">
-            <div class="col">
-              <label>Offer</label>
-            </div>
-            <div class="col">
-              <label>Price</label>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <label class="Offer">35</label>
-            </div>
-            <div class="col">
-              <label class="price">50</label>
-            </div>
-          </div>
-          <br>
-          <p>
-            A long-lasting choice for short trips. The handle on the bottle makes it easier to carry it anywhere.
-            lightweight and affordable nature.
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <a routerLink="/addtocart">
-            <button mat-raised-button color="primary">
-              <span class="material-icons">shopping_cart</span> Add to Cart  </button></a>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-
   </div>
+</form>
+<div *ngIf="patientReg">
+  <app-add-to-cart [image]="image" [title]="title" [offer]="offer" [price]="price"></app-add-to-cart>
+</div>

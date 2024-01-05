@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'DailyWater';
+
+  selectedCard: any;
+
+  onCardSelected(card: any) {
+    this.selectedCard = card;
+  }
 }

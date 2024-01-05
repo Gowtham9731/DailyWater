@@ -10,10 +10,11 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatExpansionModule} from '@angular/material/expansion';
-import {MatRippleModule} from '@angular/material/core';
+import {MatNativeDateModule, MatRippleModule} from '@angular/material/core';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatDatepickerModule} from '@angular/material/datepicker';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -51,7 +52,10 @@ import { ProductsEntryComponent } from './Admin/Stocks/products-entry/products-e
 import { ProductsRegComponent } from './Admin/Stocks/products-reg/products-reg.component';
 import { DailyOrdersComponent } from './Admin/orders/daily-orders/daily-orders.component';
 import { BulkOrdersComponent } from './Admin/orders/bulk-orders/bulk-orders.component';
+import { StatementsComponent } from './Admin/statements/statements.component';
 // import { ApiService } from './services/api.service';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 
@@ -88,17 +92,19 @@ import { BulkOrdersComponent } from './Admin/orders/bulk-orders/bulk-orders.comp
     ProductsRegComponent,
     DailyOrdersComponent,
     BulkOrdersComponent,
+    StatementsComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,ReactiveFormsModule,
     NgbModule,BrowserAnimationsModule,
     HttpClientModule,FormsModule,
     MatCardModule,MatButtonModule,
     MatDialogModule,MatSelectModule,MatTooltipModule,
     MatIconModule,MatInputModule,MatRadioModule,
     MatExpansionModule,MatRippleModule,MatMenuModule,
-    MatCheckboxModule,MatPaginatorModule,
+    MatCheckboxModule,MatPaginatorModule,MatDatepickerModule,
+    MatNativeDateModule
    
     
   ],
