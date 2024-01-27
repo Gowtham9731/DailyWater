@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -86,6 +86,14 @@ export class ApiService {
     const url1 = `${this.enqUrl}/${id}`;
     return this.http.delete(url1);
   }
+
+  imagePath: string | null = null;
+
+  setImagePath(imagePath: string) {
+    this.imagePath = imagePath;
+  }
+
+  
 }
 
 

@@ -9,39 +9,39 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './add-to-cart.component.html',
   styleUrls: ['./add-to-cart.component.scss']
 })
-export class AddToCartComponent implements OnChanges {
+export class AddToCartComponent {
 
 
   
-  @Input()title: any;
-  @Input()image: any;
-  @Input()offer: any;
-  @Input()price: any;
+  // @Input()title: any;
+  // @Input()image: any;
+  // @Input()offer: any;
+  // @Input()price: any;
 
-  ngOnInit():void{
-    // console.log(this.patienttype);
-  }
+  // ngOnInit():void{
+  //   // console.log(this.patienttype);
+  // }
   
-  selectedCard: { title: any; image: any; offer: any; price: any; } | undefined;
-  count: any;
-  cost: number | undefined;
+  // selectedCard: { title: any; image: any; offer: any; price: any; } | undefined;
+  // count: any;
+  // cost: number | undefined;
 
-  ngOnChanges(changes: SimpleChanges): void {
-    // Access the selected card details when inputs change
-    if (changes['title'] || changes['image'] || changes['offer'] || changes['price']) {
-      this.selectedCard = {
-        title: this.title,
-        image: this.image,
-        offer: this.offer,
-        price: this.price,
-      };
-      console.log('Selected Card:', this.selectedCard);
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   // Access the selected card details when inputs change
+  //   if (changes['title'] || changes['image'] || changes['offer'] || changes['price']) {
+  //     this.selectedCard = {
+  //       title: this.title,
+  //       image: this.image,
+  //       offer: this.offer,
+  //       price: this.price,
+  //     };
+  //     console.log('Selected Card:', this.selectedCard);
 
-      this.selectedCard=this.card;
-      console.log('Selected Card:',this.card);
+  //     this.selectedCard=this.card;
+  //     console.log('Selected Card:',this.card);
 
-    }
-  }
+  //   }
+  // }
 
   // @Input() title: any;
   // @Input() image: any;
@@ -51,44 +51,38 @@ export class AddToCartComponent implements OnChanges {
   // count: number = 1;
   // cost: number = 80;
   // offer: number = 60;
-  // protitle: string = '';
-  // imgSrc: string = '';
-  // image: any;
-  // title: any;
-  // offer: any;
-  // price: any;
-  // cost: any;
-  // selectedCard: any;
+  protitle: string = '';
+  imgSrc: string = '';
+  image: any;
+  title: any;
+  offer: any;
+  price: any;
+  cost: any;
+  selectedCard: any;
   card: any;
-  // data: any;
-  // dataToSend: any;
+  data: any;
+  dataToSend: any;
+  count: any;
 
+  constructor(private httpClient: HttpClient, private router: Router, private apiservice: ApiService) {
 
+    // this.selectedCard = this.apiservice.getSelectedCard();
+  }
+  ngOnInit(): void {
+    this.apiservice.geturl('https://retoolapi.dev/AZRr51/shopping').subscribe(
+      (data: any) => {
+        console.log(data);
+        if (data.length > 0) {
+          this.image = data.image;
+          this.title = data.title;
+          this.offer = data.title;
+          this.price = data.price;
+        }
 
-  // constructor(private httpClient: HttpClient, private router: Router, private apiservice: ApiService) {
+      }
 
-  //   this.selectedCard = this.apiservice.getSelectedCard();
-  // }
-  
-  // ngOnInit(): void {
-  //   // this.apiservice.geturl('https://retoolapi.dev/AZRr51/shopping').subscribe(
-  //   //   (data: any) => {
-  //   //     console.log(data);
-  //   //     if (data.length > 0) {
-  //   //       this.image = data[1].image;
-  //   //       this.title = data[1].title;
-  //   //       this.offer = data[1].title;
-  //   //       this.price = data[1].price;
-  //   //     }
-
-  //   //   }
-
-  //   // )
-  // }
-
-
-
-
+    )
+  }
   onincrement() {
     this.count++;
     this.cost = this.count * this.price;

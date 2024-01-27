@@ -29,6 +29,7 @@ import { ProductsRegComponent } from './Admin/Stocks/products-reg/products-reg.c
 import { DailyOrdersComponent } from './Admin/orders/daily-orders/daily-orders.component';
 import { TrackingComponent } from './Payment/tracking/tracking.component';
 import { StatementsComponent } from './Admin/statements/statements.component';
+import { UserAccountsComponent } from './Admin/user-accounts/user-accounts.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
@@ -61,6 +62,7 @@ const routes: Routes = [
   {path:'dailyorders',component:DailyOrdersComponent},
   {path:'tracking',component:TrackingComponent},
   {path:'statements',component:StatementsComponent},
+  {path:'userAccounts',component:UserAccountsComponent},
 
   
 

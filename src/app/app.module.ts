@@ -55,6 +55,7 @@ import { BulkOrdersComponent } from './Admin/orders/bulk-orders/bulk-orders.comp
 import { StatementsComponent } from './Admin/statements/statements.component';
 // import { ApiService } from './services/api.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { UserAccountsComponent } from './Admin/user-accounts/user-accounts.component';
 
 
 
@@ -93,6 +94,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     DailyOrdersComponent,
     BulkOrdersComponent,
     StatementsComponent,
+    UserAccountsComponent,
   ],
   imports: [
     BrowserModule,
